@@ -60,12 +60,12 @@ const translations = {
     en: 'We combine technical precision, digital innovation, and AWP methodology to deliver faster, more efficient, and collaborative projects.'
   },
   'hero.cta1': {
-    es: 'Agendar Diagnóstico Gratuito',
-    en: 'Book a Free Diagnosis'
+    es: 'Contactar',
+    en: 'Contact Us'
   },
   'hero.cta2': {
-    es: 'Ver Demo',
-    en: 'Watch Demo'
+    es: 'Más Información',
+    en: 'Learn More'
   },
   'hero.stat1': {
     es: 'Reducción en Órdenes de Cambio',

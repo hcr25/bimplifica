@@ -21,10 +21,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-              <span className="text-white font-bold text-xl">B</span>
-            </div>
-            <span className="text-2xl font-bold text-primary">IMPLIFICA</span>
+            <img 
+              src="/lovable-uploads/7fc33c99-1d53-40b3-89a7-36b722073c0d.png" 
+              alt="BIMPLIFICA Logo" 
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
