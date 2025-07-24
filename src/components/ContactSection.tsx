@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/hooks/useLanguage";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const { t } = useLanguage();
@@ -35,12 +36,29 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Save to database
+      const { error } = await supabase
+        .from('contact_requests')
+        .insert({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || null,
+          phone: formData.phone || null,
+          message: formData.message || null
+        });
+
+      if (error) {
+        throw error;
+      }
+
+      // Success
       toast({
         title: t('contact.form.success.title'),
         description: t('contact.form.success.description'),
       });
+      
+      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -48,8 +66,16 @@ const ContactSection = () => {
         phone: "",
         message: ""
       });
+    } catch (error) {
+      console.error('Error submitting contact form:', error);
+      toast({
+        title: "Error",
+        description: "Hubo un problema al enviar el formulario. Por favor inténtalo de nuevo.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
