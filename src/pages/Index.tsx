@@ -8,6 +8,7 @@ import ResultsSection from "@/components/ResultsSection";
 import ProcessSection from "@/components/ProcessSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/hooks/useLanguage";
 
 const Index = () => {
   useEffect(() => {
@@ -33,21 +34,23 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ServicesSection />
-        <SystemSection />
-        <ResultsSection />
-        <ProcessSection />
-        <ContactSection />
-      </main>
-      
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen">
+        <Header />
+        
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ServicesSection />
+          <SystemSection />
+          <ResultsSection />
+          <ProcessSection />
+          <ContactSection />
+        </main>
+        
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 };
 

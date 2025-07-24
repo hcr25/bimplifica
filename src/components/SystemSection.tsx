@@ -6,38 +6,41 @@ import {
   Headphones,
   Palette
 } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const SystemSection = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: <Eye className="h-8 w-8" />,
-      title: "360° Access",
-      description: "Complete visualization of models, schedules, and project documents from a single centralized portal."
+      title: t('system.feature1.title'),
+      description: t('system.feature1.description')
     },
     {
       icon: <Users2 className="h-8 w-8" />,
-      title: "Centralized Collaboration", 
-      description: "Integrated chat and contextual comment system with our BIM team to resolve doubts immediately."
+      title: t('system.feature2.title'), 
+      description: t('system.feature2.description')
     },
     {
       icon: <CheckSquare className="h-8 w-8" />,
-      title: "Digital Approach",
-      description: "Real-time validation of deliverables and KPIs to make faster and more informed decisions."
+      title: t('system.feature3.title'),
+      description: t('system.feature3.description')
     },
     {
       icon: <Cloud className="h-8 w-8" />,
-      title: "Traceable History",
-      description: "Secure cloud storage of all versions, RFIs, and technical documentation with personalized access control for each stakeholder."
+      title: t('system.feature4.title'),
+      description: t('system.feature4.description')
     },
     {
       icon: <Headphones className="h-8 w-8" />,
-      title: "Expert BIM Support", 
-      description: "Specialized technical team with response time under 24 hours. Remote and on-site support according to your project's specific needs."
+      title: t('system.feature5.title'), 
+      description: t('system.feature5.description')
     },
     {
       icon: <Palette className="h-8 w-8" />,
-      title: "Flexibility & Customization",
-      description: "We adapt fields, reports, and workflows to your existing processes, facilitating adoption and maximizing value from day one."
+      title: t('system.feature6.title'),
+      description: t('system.feature6.description')
     }
   ];
 
@@ -47,12 +50,11 @@ const SystemSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Project Management System
-            <span className="block text-accent">by BIMPLIFICA</span>
+            {t('system.title1')}
+            <span className="block text-accent">{t('system.title2')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our integrated digital platform centralizes all aspects of your construction project, 
-            enabling seamless collaboration and real-time project control.
+            {t('system.subtitle')}
           </p>
         </div>
 
@@ -78,7 +80,7 @@ const SystemSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold text-primary mb-6">
-                Centralized Digital Platform
+                {t('system.platform.title')}
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">

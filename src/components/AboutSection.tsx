@@ -1,7 +1,10 @@
 import { MapPin, Mail, Globe } from "lucide-react";
 import teamImage from "@/assets/team-collaboration.jpg";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="about" className="section-padding bg-muted/30">
       <div className="container-custom">
@@ -10,17 +13,13 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-                About BIMPLIFICA
+                {t('about.title')}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                BIMPLIFICA is a consulting firm specialized in digital project management for 
-                the construction industry. We integrate precise quantity take-offs, 3D/4D/5D BIM 
-                modeling, and AWP methodology to reduce costs, optimize resources, and shorten timelines.
+                {t('about.description1')}
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our team of expert engineers and digital specialists transform traditional 
-                construction processes through innovative technology solutions, delivering 
-                measurable results for our clients across Latin America.
+                {t('about.description2')}
               </p>
             </div>
 
@@ -31,7 +30,7 @@ const AboutSection = () => {
                   <MapPin className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold text-primary">Location</p>
+                  <p className="font-semibold text-primary">{t('about.location')}</p>
                   <p className="text-muted-foreground">Santiago, Chile</p>
                 </div>
               </div>
@@ -41,7 +40,7 @@ const AboutSection = () => {
                   <Mail className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold text-primary">Email</p>
+                  <p className="font-semibold text-primary">{t('about.email')}</p>
                   <p className="text-muted-foreground">contacto@bimplifica.cl</p>
                 </div>
               </div>
@@ -51,7 +50,7 @@ const AboutSection = () => {
                   <Globe className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold text-primary">Website</p>
+                  <p className="font-semibold text-primary">{t('about.website')}</p>
                   <p className="text-muted-foreground">www.bimplifica.com</p>
                 </div>
               </div>
@@ -75,12 +74,10 @@ const AboutSection = () => {
         <div className="mt-16 text-center max-w-4xl mx-auto">
           <div className="bg-white professional-card p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">
-              Our Mission
+              {t('about.mission.title')}
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              To revolutionize the construction industry through digital innovation, 
-              technical precision, and collaborative methodologies that deliver exceptional 
-              value to our clients while advancing sustainable building practices.
+              {t('about.mission.description')}
             </p>
           </div>
         </div>

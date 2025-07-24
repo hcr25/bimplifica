@@ -6,14 +6,17 @@ import {
   ArrowRight 
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
       number: "1",
       icon: <Calculator className="h-8 w-8" />,
-      title: "Quantity Take-offs & Estimations",
-      description: "Accurate digital measurements using advanced tools for budgeting, progress tracking, and documentation with maximum reliability.",
+      title: t('services.service1.title'),
+      description: t('services.service1.description'),
       features: [
         "Precision digital measurements",
         "Advanced budgeting tools", 
@@ -24,8 +27,8 @@ const ServicesSection = () => {
     {
       number: "2", 
       icon: <Box className="h-8 w-8" />,
-      title: "BIM Modeling & Coordination",
-      description: "Development and integration of 3D, 4D, and 5D BIM models that optimize planning, construction, and project control, facilitating collaboration between all disciplines.",
+      title: t('services.service2.title'),
+      description: t('services.service2.description'),
       features: [
         "3D/4D/5D BIM modeling",
         "Cross-discipline coordination", 
@@ -36,8 +39,8 @@ const ServicesSection = () => {
     {
       number: "3",
       icon: <Users className="h-8 w-8" />, 
-      title: "AWP Methodology Consulting",
-      description: "Implementation of Advanced Work Packaging methodology for efficient and organized site execution, significantly improving productivity and work control.",
+      title: t('services.service3.title'),
+      description: t('services.service3.description'),
       features: [
         "AWP implementation",
         "Workflow optimization",
@@ -48,8 +51,8 @@ const ServicesSection = () => {
     {
       number: "4",
       icon: <Settings className="h-8 w-8" />,
-      title: "Tech Solutions Development", 
-      description: "Personalized adaptation of software and digital tools for integral management of take-offs, BIM modeling, and effective work control.",
+      title: t('services.service4.title'), 
+      description: t('services.service4.description'),
       features: [
         "Custom software solutions",
         "Digital tool integration",
@@ -65,11 +68,10 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Our Specialized Services
+            {t('services.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions designed to transform your construction 
-            project management through digital innovation and proven methodologies.
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -130,14 +132,13 @@ const ServicesSection = () => {
         <div className="text-center mt-16">
           <div className="bg-muted/30 rounded-2xl p-8 md:p-12">
             <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-              Ready to Transform Your Projects?
+              {t('services.cta.title')}
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Discover how our specialized services can optimize your construction 
-              processes and deliver measurable results.
+              {t('services.cta.description')}
             </p>
             <Button variant="accent" size="lg">
-              Schedule Consultation
+              {t('services.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

@@ -1,6 +1,8 @@
 import { Mail, Globe, MapPin, Linkedin, Twitter } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (

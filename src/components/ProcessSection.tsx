@@ -4,8 +4,11 @@ import {
   Cog, 
   BarChart3
 } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const ProcessSection = () => {
+  const { t } = useLanguage();
+  
   const processSteps = [
     {
       icon: <Search className="h-8 w-8" />,
