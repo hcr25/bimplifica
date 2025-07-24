@@ -52,8 +52,8 @@ const translations = {
     en: 'Project Management'
   },
   'hero.subtitle': {
-    es: 'Conectamos precisión técnica, innovación digital y metodologías AWP para entregar proyectos más rápidos, eficientes y colaborativos.',
-    en: 'We combine technical precision, digital innovation, and AWP methodology to deliver faster, more efficient, and collaborative projects.'
+    es: 'Integramos precisión técnica, innovación digital, metodologías AWP, modelado BIM y soluciones potenciadas con Inteligencia Artificial para gestionar proyectos más ágiles, eficientes y colaborativos desde el diseño hasta la construcción.',
+    en: 'We integrate technical precision, digital innovation, AWP methodologies, BIM modeling and AI-powered solutions to manage more agile, efficient and collaborative projects from design to construction.'
   },
   'hero.cta1': {
     es: 'Contactar',
