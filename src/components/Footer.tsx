@@ -1,22 +1,17 @@
 import { Mail, Globe, MapPin, Phone, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
-
 const Footer = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-primary text-white py-16">
+  return <footer className="bg-primary text-white py-16">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src="/lovable-uploads/1832ebc8-70ac-4323-b61d-1fbf64e29194.png" 
-                alt="BIMPLIFICA Logo" 
-                className="h-12 w-auto"
-              />
+              <img src="/lovable-uploads/1832ebc8-70ac-4323-b61d-1fbf64e29194.png" alt="BIMPLIFICA Logo" className="h-12 w-auto" />
             </div>
             <p className="text-white/80 mb-6 leading-relaxed max-w-md">
               {t('footer.description')}
@@ -42,7 +37,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent" />
-                <span className="text-white/80">+56 9 6694 5349</span>
+                <span className="text-white/80">+56 9 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-accent" />
@@ -83,16 +78,10 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex items-center space-x-4">
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
-              >
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors"
-              >
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
@@ -105,8 +94,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
