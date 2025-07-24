@@ -93,7 +93,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold">{t('contact.info.website')}</p>
-                  <p className="text-white/80">www.bimplifica.com</p>
+                  <p className="text-white/80">www.bimplifica.cl</p>
                 </div>
               </div>
             </div>

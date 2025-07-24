@@ -51,7 +51,7 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-primary">{t('about.website')}</p>
-                  <p className="text-muted-foreground">www.bimplifica.com</p>
+                  <p className="text-muted-foreground">www.bimplifica.cl</p>
                 </div>
               </div>
             </div>
