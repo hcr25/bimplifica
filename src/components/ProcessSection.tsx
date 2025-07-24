@@ -12,8 +12,8 @@ const ProcessSection = () => {
   const processSteps = [
     {
       icon: <Search className="h-8 w-8" />,
-      title: "Initial Diagnosis",
-      description: "Comprehensive evaluation of your current processes, identifying critical points and improvement opportunities.",
+      title: t('process.step1.title'),
+      description: t('process.step1.description'),
       details: [
         "Current process evaluation",
         "Critical point identification", 
@@ -22,8 +22,8 @@ const ProcessSection = () => {
     },
     {
       icon: <FileText className="h-8 w-8" />,
-      title: "Personalized Proposal",
-      description: "Detailed implementation plan with clear objectives and realistic timelines tailored to your specific needs.",
+      title: t('process.step2.title'),
+      description: t('process.step2.description'),
       details: [
         "Detailed implementation plan",
         "Clear objective definition",
@@ -32,8 +32,8 @@ const ProcessSection = () => {
     },
     {
       icon: <Cog className="h-8 w-8" />,
-      title: "Progressive Implementation", 
-      description: "Gradual solution integration with continuous team training and permanent technical support throughout the process.",
+      title: t('process.step3.title'), 
+      description: t('process.step3.description'),
       details: [
         "Gradual solution integration",
         "Continuous team training",
@@ -42,8 +42,8 @@ const ProcessSection = () => {
     },
     {
       icon: <BarChart3 className="h-8 w-8" />,
-      title: "Results Measurement",
-      description: "Established KPI tracking, project impact evaluation, and constant process optimization to ensure success.",
+      title: t('process.step4.title'),
+      description: t('process.step4.description'),
       details: [
         "Established KPI tracking", 
         "Project impact evaluation",
@@ -58,11 +58,10 @@ const ProcessSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            How We Work?
+            {t('process.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our proven methodology ensures successful implementation and measurable 
-            results through a structured, collaborative approach.
+            {t('process.subtitle')}
           </p>
         </div>
 
@@ -107,7 +106,7 @@ const ProcessSection = () => {
         {/* Timeline Visualization */}
         <div className="bg-white rounded-2xl p-8 md:p-12">
           <h3 className="text-2xl md:text-3xl font-bold text-primary text-center mb-12">
-            Typical Implementation Timeline
+            {t('process.timeline.title')}
           </h3>
           
           <div className="relative">
@@ -120,8 +119,8 @@ const ProcessSection = () => {
                   1
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-primary">Week 1-2: Discovery & Analysis</h4>
-                  <p className="text-muted-foreground">Complete assessment and proposal development</p>
+                  <h4 className="text-lg font-semibold text-primary">{t('process.timeline.week1')}</h4>
+                  <p className="text-muted-foreground">{t('process.timeline.week1.desc')}</p>
                 </div>
               </div>
               
@@ -130,8 +129,8 @@ const ProcessSection = () => {
                   2
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-primary">Week 3-6: Setup & Training</h4>
-                  <p className="text-muted-foreground">Platform configuration and team onboarding</p>
+                  <h4 className="text-lg font-semibold text-primary">{t('process.timeline.week3')}</h4>
+                  <p className="text-muted-foreground">{t('process.timeline.week3.desc')}</p>
                 </div>
               </div>
               
@@ -140,8 +139,8 @@ const ProcessSection = () => {
                   3
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-primary">Week 7-12: Implementation</h4>
-                  <p className="text-muted-foreground">Gradual rollout with continuous support</p>
+                  <h4 className="text-lg font-semibold text-primary">{t('process.timeline.week7')}</h4>
+                  <p className="text-muted-foreground">{t('process.timeline.week7.desc')}</p>
                 </div>
               </div>
               
@@ -150,8 +149,8 @@ const ProcessSection = () => {
                   4
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-primary">Ongoing: Optimization</h4>
-                  <p className="text-muted-foreground">Continuous improvement and support</p>
+                  <h4 className="text-lg font-semibold text-primary">{t('process.timeline.ongoing')}</h4>
+                  <p className="text-muted-foreground">{t('process.timeline.ongoing.desc')}</p>
                 </div>
               </div>
             </div>

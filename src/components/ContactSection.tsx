@@ -10,8 +10,10 @@ import {
   CheckCircle
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "", 
@@ -36,8 +38,8 @@ const ContactSection = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Message Sent Successfully!",
-        description: "We'll contact you within 24 hours to schedule your free diagnosis.",
+        title: t('contact.form.success.title'),
+        description: t('contact.form.success.description'),
       });
       setFormData({
         name: "",
@@ -57,12 +59,10 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Transform 
-              <span className="text-accent block">Your Projects?</span>
+              {t('contact.title')}
             </h2>
             <p className="text-xl text-white/90 mb-12 leading-relaxed">
-              At BIMPLIFICA, we're prepared to take your construction projects to the 
-              next level with innovative solutions and expert support.
+              {t('contact.subtitle')}
             </p>
 
             {/* Contact Details */}
@@ -72,7 +72,7 @@ const ContactSection = () => {
                   <Mail className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold">Email</p>
+                  <p className="font-semibold">{t('contact.info.email')}</p>
                   <p className="text-white/80">contacto@bimplifica.cl</p>
                 </div>
               </div>
@@ -82,7 +82,7 @@ const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold">Location</p>
+                  <p className="font-semibold">{t('contact.info.location')}</p>
                   <p className="text-white/80">Santiago, Chile</p>
                 </div>
               </div>
@@ -92,7 +92,7 @@ const ContactSection = () => {
                   <Phone className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold">Website</p>
+                  <p className="font-semibold">{t('contact.info.website')}</p>
                   <p className="text-white/80">www.bimplifica.com</p>
                 </div>
               </div>
@@ -100,23 +100,23 @@ const ContactSection = () => {
 
             {/* Benefits */}
             <div className="bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-              <h3 className="text-xl font-bold mb-4">What You Get:</h3>
+              <h3 className="text-xl font-bold mb-4">{t('contact.benefits.title')}</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-accent" />
-                  <span className="text-white/90">Free initial diagnosis</span>
+                  <span className="text-white/90">{t('contact.benefits.diagnosis')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-accent" />
-                  <span className="text-white/90">Customized improvement plan</span>
+                  <span className="text-white/90">{t('contact.benefits.plan')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-accent" />
-                  <span className="text-white/90">ROI calculation for your projects</span>
+                  <span className="text-white/90">{t('contact.benefits.roi')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-accent" />
-                  <span className="text-white/90">No commitment consultation</span>
+                  <span className="text-white/90">{t('contact.benefits.consultation')}</span>
                 </div>
               </div>
             </div>
@@ -126,10 +126,10 @@ const ContactSection = () => {
           <div className="bg-white rounded-2xl p-8 shadow-2xl">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-primary mb-4">
-                Request Your Free Consultation
+                {t('contact.form.title')}
               </h3>
               <p className="text-muted-foreground">
-                Complete the form and we'll contact you within 24 hours
+                {t('contact.form.subtitle')}
               </p>
             </div>
 
@@ -137,7 +137,7 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
-                    Full Name *
+                    {t('contact.form.name')}
                   </label>
                   <Input
                     type="text"
@@ -145,12 +145,12 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    placeholder="Your full name"
+                    placeholder={t('contact.form.name.placeholder')}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
-                    Email *
+                    {t('contact.form.email')}
                   </label>
                   <Input
                     type="email"
@@ -158,7 +158,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    placeholder="your@email.com"
+                    placeholder={t('contact.form.email.placeholder')}
                   />
                 </div>
               </div>
@@ -166,39 +166,39 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
-                    Company
+                    {t('contact.form.company')}
                   </label>
                   <Input
                     type="text"
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    placeholder="Your company name"
+                    placeholder={t('contact.form.company.placeholder')}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
-                    Phone
+                    {t('contact.form.phone')}
                   </label>
                   <Input
                     type="tel"
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    placeholder="+56 9 xxxx xxxx"
+                    placeholder={t('contact.form.phone.placeholder')}
                   />
                 </div>
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-primary mb-2">
-                  Message
+                  {t('contact.form.message')}
                 </label>
                 <Textarea
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="Tell us about your project and how we can help you..."
+                  placeholder={t('contact.form.message.placeholder')}
                   rows={4}
                 />
               </div>
@@ -211,10 +211,10 @@ const ContactSection = () => {
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
-                  "Sending..."
+                  t('contact.form.sending')
                 ) : (
                   <>
-                    Send Message
+                    {t('contact.form.submit')}
                     <Send className="ml-2 h-5 w-5" />
                   </>
                 )}
@@ -222,8 +222,7 @@ const ContactSection = () => {
             </form>
 
             <p className="text-xs text-muted-foreground text-center mt-6">
-              By submitting this form, you agree to receive communications from BIMPLIFICA. 
-              We respect your privacy and will never share your information.
+              {t('contact.form.privacy')}
             </p>
           </div>
         </div>

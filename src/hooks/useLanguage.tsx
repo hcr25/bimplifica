@@ -322,48 +322,161 @@ const translations = {
     en: 'Typical Implementation Timeline'
   },
 
+  'process.timeline.week1': {
+    es: 'Semana 1-2: Descubrimiento y Análisis',
+    en: 'Week 1-2: Discovery & Analysis'
+  },
+  'process.timeline.week1.desc': {
+    es: 'Evaluación completa y desarrollo de propuesta',
+    en: 'Complete assessment and proposal development'
+  },
+  'process.timeline.week3': {
+    es: 'Semana 3-6: Configuración y Capacitación',
+    en: 'Week 3-6: Setup & Training'
+  },
+  'process.timeline.week3.desc': {
+    es: 'Configuración de plataforma e incorporación del equipo',
+    en: 'Platform configuration and team onboarding'
+  },
+  'process.timeline.week7': {
+    es: 'Semana 7-12: Implementación',
+    en: 'Week 7-12: Implementation'
+  },
+  'process.timeline.week7.desc': {
+    es: 'Despliegue gradual con soporte continuo',
+    en: 'Gradual rollout with continuous support'
+  },
+  'process.timeline.ongoing': {
+    es: 'Continuo: Optimización',
+    en: 'Ongoing: Optimization'
+  },
+  'process.timeline.ongoing.desc': {
+    es: 'Mejora continua y soporte',
+    en: 'Continuous improvement and support'
+  },
+
   // Contact Section
   'contact.title': {
     es: '¿Listo para Transformar sus Proyectos?',
     en: 'Ready to Transform Your Projects?'
   },
   'contact.subtitle': {
-    es: 'Contacte con nuestros expertos para una consulta gratuita personalizada',
-    en: 'Contact our experts for a free personalized consultation'
+    es: 'En BIMPLIFICA, estamos preparados para llevar sus proyectos de construcción al siguiente nivel con soluciones innovadoras y soporte experto.',
+    en: 'At BIMPLIFICA, we\'re prepared to take your construction projects to the next level with innovative solutions and expert support.'
+  },
+  'contact.info.email': {
+    es: 'Correo',
+    en: 'Email'
+  },
+  'contact.info.location': {
+    es: 'Ubicación',
+    en: 'Location'
+  },
+  'contact.info.website': {
+    es: 'Sitio Web',
+    en: 'Website'
+  },
+  'contact.benefits.title': {
+    es: 'Lo Que Obtiene:',
+    en: 'What You Get:'
+  },
+  'contact.benefits.diagnosis': {
+    es: 'Diagnóstico inicial gratuito',
+    en: 'Free initial diagnosis'
+  },
+  'contact.benefits.plan': {
+    es: 'Plan de mejora personalizado',
+    en: 'Customized improvement plan'
+  },
+  'contact.benefits.roi': {
+    es: 'Cálculo de ROI para sus proyectos',
+    en: 'ROI calculation for your projects'
+  },
+  'contact.benefits.consultation': {
+    es: 'Consulta sin compromiso',
+    en: 'No commitment consultation'
+  },
+  'contact.form.title': {
+    es: 'Solicite su Consulta Gratuita',
+    en: 'Request Your Free Consultation'
+  },
+  'contact.form.subtitle': {
+    es: 'Complete el formulario y le contactaremos en 24 horas',
+    en: 'Complete the form and we\'ll contact you within 24 hours'
   },
   'contact.form.name': {
-    es: 'Nombre Completo',
-    en: 'Full Name'
+    es: 'Nombre Completo *',
+    en: 'Full Name *'
+  },
+  'contact.form.name.placeholder': {
+    es: 'Su nombre completo',
+    en: 'Your full name'
   },
   'contact.form.email': {
-    es: 'Correo Electrónico',
-    en: 'Email Address'
+    es: 'Correo Electrónico *',
+    en: 'Email *'
+  },
+  'contact.form.email.placeholder': {
+    es: 'su@correo.com',
+    en: 'your@email.com'
   },
   'contact.form.company': {
     es: 'Empresa',
     en: 'Company'
   },
+  'contact.form.company.placeholder': {
+    es: 'Nombre de su empresa',
+    en: 'Your company name'
+  },
   'contact.form.phone': {
     es: 'Teléfono',
     en: 'Phone'
+  },
+  'contact.form.phone.placeholder': {
+    es: '+56 9 xxxx xxxx',
+    en: '+56 9 xxxx xxxx'
   },
   'contact.form.message': {
     es: 'Mensaje',
     en: 'Message'
   },
-  'contact.form.submit': {
-    es: 'Solicitar Consulta',
-    en: 'Request Consultation'
+  'contact.form.message.placeholder': {
+    es: 'Cuéntanos sobre su proyecto y cómo podemos ayudarle...',
+    en: 'Tell us about your project and how we can help you...'
   },
-  'contact.info.title': {
-    es: 'Información de Contacto',
-    en: 'Contact Information'
+  'contact.form.submit': {
+    es: 'Enviar Mensaje',
+    en: 'Send Message'
+  },
+  'contact.form.sending': {
+    es: 'Enviando...',
+    en: 'Sending...'
+  },
+  'contact.form.success.title': {
+    es: '¡Mensaje Enviado Exitosamente!',
+    en: 'Message Sent Successfully!'
+  },
+  'contact.form.success.description': {
+    es: 'Le contactaremos en 24 horas para agendar su diagnóstico gratuito.',
+    en: 'We\'ll contact you within 24 hours to schedule your free diagnosis.'
+  },
+  'contact.form.privacy': {
+    es: 'Al enviar este formulario, acepta recibir comunicaciones de BIMPLIFICA. Respetamos su privacidad y nunca compartiremos su información.',
+    en: 'By submitting this form, you agree to receive communications from BIMPLIFICA. We respect your privacy and will never share your information.'
   },
 
   // Footer
   'footer.description': {
     es: 'Transformando la industria de la construcción a través de innovación digital y precisión técnica en cada proyecto.',
     en: 'Transforming the construction industry through digital innovation and technical precision in every project.'
+  },
+  'footer.specialization': {
+    es: 'Especializados en modelado BIM, cubicaciones y metodología AWP para la excelencia en construcción.',
+    en: 'Specializing in BIM modeling, quantity take-offs, and AWP methodology for construction excellence.'
+  },
+  'footer.contact.title': {
+    es: 'Contacto',
+    en: 'Contact'
   },
   'footer.services.title': {
     es: 'Servicios',

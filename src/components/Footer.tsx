@@ -18,20 +18,18 @@ const Footer = () => {
               <span className="text-3xl font-bold">IMPLIFICA</span>
             </div>
             <p className="text-white/80 mb-6 leading-relaxed max-w-md">
-              Transforming the construction industry through digital innovation 
-              and technical precision in every project.
+              {t('footer.description')}
             </p>
             <div className="text-sm text-white/60">
               <p className="mb-2">
-                Specializing in BIM modeling, quantity take-offs, and AWP methodology 
-                for construction excellence.
+                {t('footer.specialization')}
               </p>
             </div>
           </div>
 
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contact</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.contact.title')}</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent" />
@@ -50,22 +48,22 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Services</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.services.title')}</h3>
             <div className="space-y-3">
               <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                Quantity Take-offs
+                {t('footer.services.takeoffs')}
               </div>
               <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                BIM Modeling
+                {t('footer.services.bim')}
               </div>
               <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                AWP Consulting
+                {t('footer.services.awp')}
               </div>
               <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                Tech Solutions
+                {t('footer.services.tech')}
               </div>
               <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                Project Management
+                {t('footer.services.management')}
               </div>
             </div>
           </div>
@@ -75,7 +73,7 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-white/60 text-sm mb-4 md:mb-0">
-              © {currentYear} BIMPLIFICA. All rights reserved.
+              © {currentYear} BIMPLIFICA. {t('footer.copyright')}
             </div>
             
             {/* Social Links */}
@@ -97,7 +95,7 @@ const Footer = () => {
           
           <div className="text-white/40 text-xs text-center mt-6">
             <p>
-              Transforming construction through digital innovation and technical precision.
+              {t('footer.tagline')}
             </p>
           </div>
         </div>
