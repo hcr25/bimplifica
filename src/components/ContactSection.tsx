@@ -25,27 +25,73 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone: string) => {
+    const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+    return phone === '' || phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    
+    // Basic input sanitization - remove potentially dangerous script tags
+    const sanitizedValue = value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+    
+    setFormData(prev => ({
+      ...prev,
+      [name]: sanitizedValue
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Client-side validation
+    if (!validateEmail(formData.email)) {
+      toast({
+        title: "Error de validación",
+        description: "Por favor ingresa un email válido.",
+        variant: "destructive"
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (formData.phone && !validatePhone(formData.phone)) {
+      toast({
+        title: "Error de validación", 
+        description: "Por favor ingresa un número de teléfono válido.",
+        variant: "destructive"
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (formData.message && formData.message.length > 1000) {
+      toast({
+        title: "Error de validación",
+        description: "El mensaje no puede exceder 1000 caracteres.",
+        variant: "destructive"
+      });
+      setIsSubmitting(false);
+      return;
+    }
+    
     try {
       // Save to database
       const { error } = await supabase
         .from('contact_requests')
         .insert({
-          name: formData.name,
-          email: formData.email,
-          company: formData.company || null,
-          phone: formData.phone || null,
-          message: formData.message || null
+          name: formData.name.trim(),
+          email: formData.email.trim().toLowerCase(),
+          company: formData.company?.trim() || null,
+          phone: formData.phone?.trim() || null,
+          message: formData.message?.trim() || null
         });
 
       if (error) {
