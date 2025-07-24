@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/lovable-uploads/f9d11641-9fab-40b4-b6cf-b76a72e4cb76.png" 
+                src="/lovable-uploads/1832ebc8-70ac-4323-b61d-1fbf64e29194.png" 
                 alt="BIMPLIFICA Logo" 
                 className="h-12 w-auto"
               />

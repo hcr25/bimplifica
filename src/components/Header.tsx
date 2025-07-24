@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/fac05210-ccb5-44b0-8124-837e13303dae.png" 
+              src="/lovable-uploads/1832ebc8-70ac-4323-b61d-1fbf64e29194.png" 
               alt="BIMPLIFICA Logo" 
               className="h-8 w-auto"
             />
