@@ -103,59 +103,6 @@ const ProcessSection = () => {
           ))}
         </div>
 
-        {/* Timeline Visualization */}
-        <div className="bg-white rounded-2xl p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-primary text-center mb-12">
-            {t('process.timeline.title')}
-          </h3>
-          
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-accent/20"></div>
-            
-            <div className="space-y-12">
-              <div className="flex items-center">
-                <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center text-white font-bold text-lg mr-8">
-                  1
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-primary">{t('process.timeline.week1')}</h4>
-                  <p className="text-muted-foreground">{t('process.timeline.week1.desc')}</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="w-16 h-16 rounded-full bg-tech-blue flex items-center justify-center text-white font-bold text-lg mr-8">
-                  2
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-primary">{t('process.timeline.week3')}</h4>
-                  <p className="text-muted-foreground">{t('process.timeline.week3.desc')}</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="w-16 h-16 rounded-full bg-tech-green flex items-center justify-center text-white font-bold text-lg mr-8">
-                  3
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-primary">{t('process.timeline.week7')}</h4>
-                  <p className="text-muted-foreground">{t('process.timeline.week7.desc')}</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center">
-                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg mr-8">
-                  4
-                </div>
-                <div>
-                  <h4 className="text-lg font-semibold text-primary">{t('process.timeline.ongoing')}</h4>
-                  <p className="text-muted-foreground">{t('process.timeline.ongoing.desc')}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
