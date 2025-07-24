@@ -22,7 +22,7 @@ const HeroSection = () => {
           alt="Construction site with BIM technology" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/45"></div>
+        <div className="absolute inset-0 bg-primary/75"></div>
       </div>
 
       {/* Content */}
@@ -34,9 +34,9 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-[3.5rem] md:text-[5.2rem] font-bold mb-6 leading-tight text-white drop-shadow-lg">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             {t('hero.title1')}
-            <span className="text-orange-400/90 block drop-shadow-md">{t('hero.title2')}</span>
+            <span className="text-accent block">{t('hero.title2')}</span>
           </h1>
 
           {/* Subheadline */}
@@ -50,7 +50,7 @@ const HeroSection = () => {
               variant="hero" 
               size="lg"
               onClick={scrollToContact}
-              className="text-lg px-8 py-4 h-auto shadow-lg hover:shadow-xl hover:bg-orange-500/90 transition-all duration-300"
+              className="text-lg px-8 py-4 h-auto"
             >
               {t('hero.cta1')}
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -60,23 +60,17 @@ const HeroSection = () => {
 
           {/* Key Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="text-center fade-in-up">
-              <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="text-4xl font-bold text-orange-400 mb-2">30%</div>
-                <div className="text-white/80">{t('hero.stat1')}</div>
-              </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-accent mb-2">30%</div>
+              <div className="text-white/80">{t('hero.stat1')}</div>
             </div>
-            <div className="text-center fade-in-up">
-              <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="text-4xl font-bold text-orange-400 mb-2">40%</div>
-                <div className="text-white/80">{t('hero.stat2')}</div>
-              </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-accent mb-2">40%</div>
+              <div className="text-white/80">{t('hero.stat2')}</div>
             </div>
-            <div className="text-center fade-in-up">
-              <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <div className="text-4xl font-bold text-orange-400 mb-2">25%</div>
-                <div className="text-white/80">{t('hero.stat3')}</div>
-              </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-accent mb-2">25%</div>
+              <div className="text-white/80">{t('hero.stat3')}</div>
             </div>
           </div>
         </div>
@@ -84,8 +78,8 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="w-12 h-20 border-2 border-white/30 rounded-full flex justify-center animate-bounce">
-          <div className="w-2 h-6 bg-white/60 rounded-full mt-4"></div>
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
