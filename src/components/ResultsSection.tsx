@@ -129,28 +129,6 @@ const ResultsSection = () => {
           </div>
         </div>
 
-        {/* ROI Section */}
-        <div className="text-center">
-          <div className="professional-card p-8 md:p-12 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">
-              {t('results.roi.title')}
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <div className="text-3xl font-bold text-tech-green mb-2">3-6</div>
-                <div className="text-sm text-muted-foreground">{t('results.roi.payback')}</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-tech-blue mb-2">200%+</div>
-                <div className="text-sm text-muted-foreground">{t('results.roi.average')}</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-accent mb-2">$500K+</div>
-                <div className="text-sm text-muted-foreground">{t('results.roi.savings')}</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

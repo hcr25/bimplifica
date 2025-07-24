@@ -263,10 +263,6 @@ const translations = {
     es: 'Valor Diferencial: Integración Tecnológica Completa',
     en: 'Differential Value: Complete Technological Integration'
   },
-  'results.roi.title': {
-    es: 'Retorno de Inversión',
-    en: 'Return on Investment'
-  },
 
   // Process Section
   'process.title': {
@@ -487,18 +483,6 @@ const translations = {
     es: 'Conectamos la precisión técnica de las cubicaciones con la innovación del modelado BIM y la disciplina metodológica AWP, garantizando resultados más rápidos, confiables y colaborativos en cada fase de su proyecto.',
     en: 'We connect the technical precision of take-offs with BIM modeling innovation and AWP methodology discipline, guaranteeing faster, more reliable, and collaborative results in every phase of your project.'
   },
-  'results.roi.payback': {
-    es: 'Período de Recuperación en Meses',
-    en: 'Months Payback Period'
-  },
-  'results.roi.average': {
-    es: 'ROI Promedio en Año 1',
-    en: 'Average ROI in Year 1'
-  },
-  'results.roi.savings': {
-    es: 'Ahorros Anuales Promedio',
-    en: 'Average Annual Savings'
-  },
 
   'process.timeline.week1': {
     es: 'Semana 1-2: Descubrimiento y Análisis',
@@ -561,10 +545,6 @@ const translations = {
   'contact.benefits.plan': {
     es: 'Plan de mejora personalizado',
     en: 'Customized improvement plan'
-  },
-  'contact.benefits.roi': {
-    es: 'Cálculo de ROI para sus proyectos',
-    en: 'ROI calculation for your projects'
   },
   'contact.benefits.consultation': {
     es: 'Consulta sin compromiso',
