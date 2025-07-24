@@ -83,19 +83,26 @@ const ContactSection = () => {
     }
     
     try {
-      // Save to database
-      const { error } = await supabase
-        .from('contact_requests')
-        .insert({
+      // Use secure edge function for server-side validation and rate limiting
+      const response = await fetch('https://vsxtnzfefytecgpajlrr.supabase.co/functions/v1/submit-contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZzeHRuemZlZnl0ZWNncGFqbHJyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzk2MjksImV4cCI6MjA2ODkxNTYyOX0.--ePAJaBJdHkvaqbx3DIbNlvWFS2-EN9xrqCjQa3ezM`
+        },
+        body: JSON.stringify({
           name: formData.name.trim(),
           email: formData.email.trim().toLowerCase(),
           company: formData.company?.trim() || null,
           phone: formData.phone?.trim() || null,
           message: formData.message?.trim() || null
-        });
+        })
+      });
 
-      if (error) {
-        throw error;
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit contact request');
       }
 
       // Success
