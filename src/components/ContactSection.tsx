@@ -171,8 +171,8 @@ const ContactSection = () => {
             </div>
 
             {/* Benefits */}
-            <div className="bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-              <h3 className="text-xl font-bold mb-4">{t('contact.benefits.title')}</h3>
+            <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm border border-white/20">
+              <h3 className="text-xl font-bold mb-4 text-white">{t('contact.benefits.title')}</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-accent" />
