@@ -56,14 +56,6 @@ const HeroSection = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="text-lg px-8 py-4 h-auto border-white/30 text-white hover:bg-white/10"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              {t('hero.cta2')}
-            </Button>
           </div>
 
           {/* Key Stats */}

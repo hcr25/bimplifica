@@ -104,10 +104,6 @@ const ContactSection = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 text-accent" />
-                  <span className="text-white/90">{t('contact.benefits.diagnosis')}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-accent" />
                   <span className="text-white/90">{t('contact.benefits.plan')}</span>
                 </div>
                 <div className="flex items-center space-x-3">

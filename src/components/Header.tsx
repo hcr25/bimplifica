@@ -94,15 +94,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button 
-              variant="accent" 
-              onClick={() => scrollToSection('contact')}
-            >
-              {t('nav.cta')}
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -180,13 +171,6 @@ const Header = () => {
                 </div>
               </div>
 
-              <Button 
-                variant="accent" 
-                className="w-full"
-                onClick={() => scrollToSection('contact')}
-              >
-                {t('nav.cta')}
-              </Button>
             </nav>
           </div>
         )}

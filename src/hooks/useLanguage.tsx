@@ -37,10 +37,6 @@ const translations = {
     es: 'Contacto',
     en: 'Contact'
   },
-  'nav.cta': {
-    es: 'Diagnóstico Gratuito',
-    en: 'Free Diagnosis'
-  },
 
   // Hero Section
   'hero.badge': {
@@ -62,10 +58,6 @@ const translations = {
   'hero.cta1': {
     es: 'Contactar',
     en: 'Contact Us'
-  },
-  'hero.cta2': {
-    es: 'Más Información',
-    en: 'Learn More'
   },
   'hero.stat1': {
     es: 'Reducción en Órdenes de Cambio',
@@ -380,10 +372,6 @@ const translations = {
     es: 'Lo Que Obtiene:',
     en: 'What You Get:'
   },
-  'contact.benefits.diagnosis': {
-    es: 'Diagnóstico inicial gratuito',
-    en: 'Free initial diagnosis'
-  },
   'contact.benefits.plan': {
     es: 'Plan de mejora personalizado',
     en: 'Customized improvement plan'
@@ -457,8 +445,8 @@ const translations = {
     en: 'Message Sent Successfully!'
   },
   'contact.form.success.description': {
-    es: 'Le contactaremos en 24 horas para agendar su diagnóstico gratuito.',
-    en: 'We\'ll contact you within 24 hours to schedule your free diagnosis.'
+    es: 'Le contactaremos en 24 horas.',
+    en: 'We\'ll contact you within 24 hours.'
   },
   'contact.form.privacy': {
     es: 'Al enviar este formulario, acepta recibir comunicaciones de BIMPLIFICA. Respetamos su privacidad y nunca compartiremos su información.',
