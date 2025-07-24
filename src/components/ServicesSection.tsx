@@ -11,6 +11,13 @@ import { useLanguage } from "@/hooks/useLanguage";
 const ServicesSection = () => {
   const { t } = useLanguage();
   
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   const services = [
     {
       number: "1",
@@ -137,7 +144,7 @@ const ServicesSection = () => {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               {t('services.cta.description')}
             </p>
-            <Button variant="accent" size="lg">
+            <Button variant="accent" size="lg" onClick={scrollToContact}>
               {t('services.cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
