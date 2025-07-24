@@ -35,7 +35,7 @@ const HeroSection = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            {t('hero.title1')}
+            <span className="text-white text-6xl md:text-8xl block mb-2 drop-shadow-sm">{t('hero.title1')}</span>
             <span className="text-accent block">{t('hero.title2')}</span>
           </h1>
 
