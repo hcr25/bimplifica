@@ -683,6 +683,39 @@ const translations = {
   'footer.tagline': {
     es: 'Transformando la construcción a través de innovación digital y precisión técnica.',
     en: 'Transforming construction through digital innovation and technical precision.'
+  },
+  // BIM Section
+  'bim.title': {
+    es: 'MODELADO Y COORDINACIÓN BIM (3D, 4D, 5D)',
+    en: 'BIM MODELING AND COORDINATION (3D, 4D, 5D)'
+  },
+  'bim.modeling3d.title': {
+    es: 'MODELADO 3D',
+    en: '3D MODELING'
+  },
+  'bim.modeling3d.description': {
+    es: 'Representación digital completa del proyecto con detección automatizada de interferencias entre disciplinas.',
+    en: 'Complete digital representation of the project with automated interference detection between disciplines.'
+  },
+  'bim.planning4d.title': {
+    es: 'PLANIFICACIÓN 4D',
+    en: '4D PLANNING'
+  },
+  'bim.planning4d.description': {
+    es: 'Vinculación del modelo con cronogramas para simular la secuencia constructiva y optimizar plazos.',
+    en: 'Linking the model with schedules to simulate construction sequence and optimize timelines.'
+  },
+  'bim.control5d.title': {
+    es: 'CONTROL 5D',
+    en: '5D CONTROL'
+  },
+  'bim.control5d.description': {
+    es: 'Integración de costos al modelo para seguimiento presupuestario y proyecciones financieras precisas.',
+    en: 'Integration of costs to the model for budget tracking and precise financial projections.'
+  },
+  'bim.expertise': {
+    es: 'Nuestro conocimiento profundo de la dinámica de obra civil nos permite crear modelos que realmente anticipan conflictos y mejoran la coordinación entre especialidades.',
+    en: 'Our deep knowledge of civil works dynamics allows us to create models that truly anticipate conflicts and improve coordination between specialties.'
   }
 };
 
