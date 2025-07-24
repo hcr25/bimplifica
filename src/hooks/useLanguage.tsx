@@ -52,8 +52,8 @@ const translations = {
     en: 'Project Management'
   },
   'hero.subtitle': {
-    es: 'Integramos precisión técnica, innovación digital, metodologías AWP, modelado BIM y soluciones potenciadas con Inteligencia Artificial para gestionar proyectos más ágiles, eficientes y colaborativos desde el diseño hasta la construcción.',
-    en: 'We integrate technical precision, digital innovation, AWP methodologies, BIM modeling and AI-powered solutions to manage more agile, efficient and collaborative projects from design to construction.'
+    es: 'BIM · IA · AWP integrados para una gestión de proyectos ágil, eficiente y colaborativa — desde el diseño hasta la construcción.',
+    en: 'BIM · AI · AWP integrated for agile, efficient and collaborative project management — from design to construction.'
   },
   'hero.cta1': {
     es: 'Contactar',
