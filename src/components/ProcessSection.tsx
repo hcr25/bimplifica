@@ -15,9 +15,9 @@ const ProcessSection = () => {
       title: t('process.step1.title'),
       description: t('process.step1.description'),
       details: [
-        "Current process evaluation",
-        "Critical point identification", 
-        "Improvement opportunity analysis"
+        t('process.step1.detail1'),
+        t('process.step1.detail2'),
+        t('process.step1.detail3')
       ]
     },
     {
@@ -25,9 +25,9 @@ const ProcessSection = () => {
       title: t('process.step2.title'),
       description: t('process.step2.description'),
       details: [
-        "Detailed implementation plan",
-        "Clear objective definition",
-        "Realistic timeline establishment"
+        t('process.step2.detail1'),
+        t('process.step2.detail2'),
+        t('process.step2.detail3')
       ]
     },
     {
@@ -35,9 +35,9 @@ const ProcessSection = () => {
       title: t('process.step3.title'), 
       description: t('process.step3.description'),
       details: [
-        "Gradual solution integration",
-        "Continuous team training",
-        "Permanent technical support"
+        t('process.step3.detail1'),
+        t('process.step3.detail2'),
+        t('process.step3.detail3')
       ]
     },
     {
@@ -45,9 +45,9 @@ const ProcessSection = () => {
       title: t('process.step4.title'),
       description: t('process.step4.description'),
       details: [
-        "Established KPI tracking", 
-        "Project impact evaluation",
-        "Constant process optimization"
+        t('process.step4.detail1'),
+        t('process.step4.detail2'),
+        t('process.step4.detail3')
       ]
     }
   ];
@@ -81,7 +81,7 @@ const ProcessSection = () => {
                 </div>
                 <div className="mb-4">
                   <div className="text-sm font-medium text-accent mb-2">
-                    Step {index + 1}
+                    {t('process.step.label')} {index + 1}
                   </div>
                   <h3 className="text-xl font-bold text-primary">
                     {step.title}

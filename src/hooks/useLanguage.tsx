@@ -314,6 +314,192 @@ const translations = {
     en: 'Typical Implementation Timeline'
   },
 
+  // Process Section - Details
+  'process.step1.detail1': {
+    es: 'Evaluación de procesos actuales',
+    en: 'Current process evaluation'
+  },
+  'process.step1.detail2': {
+    es: 'Identificación de puntos críticos',
+    en: 'Critical point identification'
+  },
+  'process.step1.detail3': {
+    es: 'Análisis de oportunidades de mejora',
+    en: 'Improvement opportunity analysis'
+  },
+  'process.step2.detail1': {
+    es: 'Plan de implementación detallado',
+    en: 'Detailed implementation plan'
+  },
+  'process.step2.detail2': {
+    es: 'Definición clara de objetivos',
+    en: 'Clear objective definition'
+  },
+  'process.step2.detail3': {
+    es: 'Establecimiento de cronograma realista',
+    en: 'Realistic timeline establishment'
+  },
+  'process.step3.detail1': {
+    es: 'Integración gradual de soluciones',
+    en: 'Gradual solution integration'
+  },
+  'process.step3.detail2': {
+    es: 'Capacitación continua del equipo',
+    en: 'Continuous team training'
+  },
+  'process.step3.detail3': {
+    es: 'Soporte técnico permanente',
+    en: 'Permanent technical support'
+  },
+  'process.step4.detail1': {
+    es: 'Seguimiento de KPI establecidos',
+    en: 'Established KPI tracking'
+  },
+  'process.step4.detail2': {
+    es: 'Evaluación de impacto del proyecto',
+    en: 'Project impact evaluation'
+  },
+  'process.step4.detail3': {
+    es: 'Optimización constante de procesos',
+    en: 'Constant process optimization'
+  },
+  'process.step.label': {
+    es: 'Paso',
+    en: 'Step'
+  },
+
+  // Services Section - Features
+  'services.service1.feature1': {
+    es: 'Mediciones digitales precisas',
+    en: 'Precision digital measurements'
+  },
+  'services.service1.feature2': {
+    es: 'Herramientas avanzadas de presupuestación',
+    en: 'Advanced budgeting tools'
+  },
+  'services.service1.feature3': {
+    es: 'Sistemas de seguimiento de progreso',
+    en: 'Progress tracking systems'
+  },
+  'services.service1.feature4': {
+    es: 'Gestión de documentación',
+    en: 'Documentation management'
+  },
+  'services.service2.feature1': {
+    es: 'Modelado BIM 3D/4D/5D',
+    en: '3D/4D/5D BIM modeling'
+  },
+  'services.service2.feature2': {
+    es: 'Coordinación entre disciplinas',
+    en: 'Cross-discipline coordination'
+  },
+  'services.service2.feature3': {
+    es: 'Sistemas de detección de conflictos',
+    en: 'Clash detection systems'
+  },
+  'services.service2.feature4': {
+    es: 'Optimización de modelos',
+    en: 'Model optimization'
+  },
+  'services.service3.feature1': {
+    es: 'Implementación AWP',
+    en: 'AWP implementation'
+  },
+  'services.service3.feature2': {
+    es: 'Optimización de flujos de trabajo',
+    en: 'Workflow optimization'
+  },
+  'services.service3.feature3': {
+    es: 'Mejora de productividad',
+    en: 'Productivity enhancement'
+  },
+  'services.service3.feature4': {
+    es: 'Planificación de ejecución en sitio',
+    en: 'Site execution planning'
+  },
+  'services.service4.feature1': {
+    es: 'Soluciones de software personalizadas',
+    en: 'Custom software solutions'
+  },
+  'services.service4.feature2': {
+    es: 'Integración de herramientas digitales',
+    en: 'Digital tool integration'
+  },
+  'services.service4.feature3': {
+    es: 'Automatización de flujos de trabajo',
+    en: 'Workflow automation'
+  },
+  'services.service4.feature4': {
+    es: 'Optimización de sistemas',
+    en: 'System optimization'
+  },
+  'services.service.label': {
+    es: 'Servicio',
+    en: 'Service'
+  },
+
+  // Results Section - Details and Benefits
+  'results.transparency.details': {
+    es: 'Reportes automáticos de progreso comparados con cronogramas planificados.',
+    en: 'Automatic progress reports compared to planned schedules.'
+  },
+  'results.risks.details': {
+    es: 'Promedio de 30% de reducción en órdenes de cambio durante construcción.',
+    en: 'Average 30% reduction in change orders during construction.'
+  },
+  'results.optimization.details': {
+    es: 'Reducción de desperdicios y optimización de adquisiciones.',
+    en: 'Waste reduction and procurement optimization.'
+  },
+  'results.benefit1.title': {
+    es: 'Flujo Continuo de Información',
+    en: 'Continuous Information Flow'
+  },
+  'results.benefit1.description': {
+    es: 'Flujo ininterrumpido de información entre cubicaciones, modelos BIM y paquetes de trabajo.',
+    en: 'Uninterrupted information flow between take-offs, BIM models, and work packages.'
+  },
+  'results.benefit2.title': {
+    es: 'Visualización en Tiempo Real',
+    en: 'Real-time Visualization'
+  },
+  'results.benefit2.description': {
+    es: 'Impactos de cambios en costos y cronograma visibles instantáneamente.',
+    en: 'Cost and schedule change impacts visible instantly.'
+  },
+  'results.benefit3.title': {
+    es: 'Aumento de Precisión 40%',
+    en: '40% Precision Increase'
+  },
+  'results.benefit3.description': {
+    es: 'Presupuestos 40% más precisos comparados con métodos tradicionales.',
+    en: 'Budgets 40% more accurate compared to traditional methods.'
+  },
+  'results.benefit4.title': {
+    es: 'Reducción de Tiempo 25%',
+    en: '25% Time Reduction'
+  },
+  'results.benefit4.description': {
+    es: 'Ejecución 25% más rápida mediante planificación AWP optimizada.',
+    en: '25% faster execution through optimized AWP planning.'
+  },
+  'results.differential.description': {
+    es: 'Conectamos la precisión técnica de las cubicaciones con la innovación del modelado BIM y la disciplina metodológica AWP, garantizando resultados más rápidos, confiables y colaborativos en cada fase de su proyecto.',
+    en: 'We connect the technical precision of take-offs with BIM modeling innovation and AWP methodology discipline, guaranteeing faster, more reliable, and collaborative results in every phase of your project.'
+  },
+  'results.roi.payback': {
+    es: 'Período de Recuperación en Meses',
+    en: 'Months Payback Period'
+  },
+  'results.roi.average': {
+    es: 'ROI Promedio en Año 1',
+    en: 'Average ROI in Year 1'
+  },
+  'results.roi.savings': {
+    es: 'Ahorros Anuales Promedio',
+    en: 'Average Annual Savings'
+  },
+
   'process.timeline.week1': {
     es: 'Semana 1-2: Descubrimiento y Análisis',
     en: 'Week 1-2: Discovery & Analysis'

@@ -17,7 +17,7 @@ const ResultsSection = () => {
       percentage: "30%",
       subtitle: t('hero.stat1'),
       description: t('results.transparency.description'),
-      details: "Automatic progress reports compared to planned schedules."
+      details: t('results.transparency.details')
     },
     {
       icon: <Target className="h-8 w-8" />, 
@@ -25,7 +25,7 @@ const ResultsSection = () => {
       percentage: "40%", 
       subtitle: t('hero.stat2'),
       description: t('results.risks.description'),
-      details: "Average 30% reduction in change orders during construction."
+      details: t('results.risks.details')
     },
     {
       icon: <Clock className="h-8 w-8" />,
@@ -33,30 +33,30 @@ const ResultsSection = () => {
       percentage: "25%",
       subtitle: t('hero.stat3'),
       description: t('results.optimization.description'),
-      details: "Waste reduction and procurement optimization."
+      details: t('results.optimization.details')
     }
   ];
 
   const benefits = [
     {
       icon: <Recycle className="h-6 w-6" />,
-      title: "Continuous Information Flow",
-      description: "Uninterrupted information flow between take-offs, BIM models, and work packages."
+      title: t('results.benefit1.title'),
+      description: t('results.benefit1.description')
     },
     {
       icon: <Eye className="h-6 w-6" />,
-      title: "Real-time Visualization", 
-      description: "Cost and schedule change impacts visible instantly."
+      title: t('results.benefit2.title'),
+      description: t('results.benefit2.description')
     },
     {
       icon: <Target className="h-6 w-6" />,
-      title: "40% Precision Increase",
-      description: "Budgets 40% more accurate compared to traditional methods."
+      title: t('results.benefit3.title'),
+      description: t('results.benefit3.description')
     },
     {
       icon: <Clock className="h-6 w-6" />,
-      title: "25% Time Reduction", 
-      description: "25% faster execution through optimized AWP planning."
+      title: t('results.benefit4.title'),
+      description: t('results.benefit4.description')
     }
   ];
 
@@ -108,9 +108,7 @@ const ResultsSection = () => {
               {t('results.differential.title')}
             </h3>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              We connect the technical precision of take-offs with BIM modeling innovation 
-              and AWP methodology discipline, guaranteeing faster, more reliable, and 
-              collaborative results in every phase of your project.
+              {t('results.differential.description')}
             </p>
           </div>
 
@@ -140,15 +138,15 @@ const ResultsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <div className="text-3xl font-bold text-tech-green mb-2">3-6</div>
-                <div className="text-sm text-muted-foreground">Months Payback Period</div>
+                <div className="text-sm text-muted-foreground">{t('results.roi.payback')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-tech-blue mb-2">200%+</div>
-                <div className="text-sm text-muted-foreground">Average ROI in Year 1</div>
+                <div className="text-sm text-muted-foreground">{t('results.roi.average')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-accent mb-2">$500K+</div>
-                <div className="text-sm text-muted-foreground">Average Annual Savings</div>
+                <div className="text-sm text-muted-foreground">{t('results.roi.savings')}</div>
               </div>
             </div>
           </div>

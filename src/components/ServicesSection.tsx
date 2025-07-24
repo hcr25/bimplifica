@@ -18,10 +18,10 @@ const ServicesSection = () => {
       title: t('services.service1.title'),
       description: t('services.service1.description'),
       features: [
-        "Precision digital measurements",
-        "Advanced budgeting tools", 
-        "Progress tracking systems",
-        "Documentation management"
+        t('services.service1.feature1'),
+        t('services.service1.feature2'),
+        t('services.service1.feature3'),
+        t('services.service1.feature4')
       ]
     },
     {
@@ -30,10 +30,10 @@ const ServicesSection = () => {
       title: t('services.service2.title'),
       description: t('services.service2.description'),
       features: [
-        "3D/4D/5D BIM modeling",
-        "Cross-discipline coordination", 
-        "Clash detection systems",
-        "Model optimization"
+        t('services.service2.feature1'),
+        t('services.service2.feature2'),
+        t('services.service2.feature3'),
+        t('services.service2.feature4')
       ]
     },
     {
@@ -42,10 +42,10 @@ const ServicesSection = () => {
       title: t('services.service3.title'),
       description: t('services.service3.description'),
       features: [
-        "AWP implementation",
-        "Workflow optimization",
-        "Productivity enhancement",
-        "Site execution planning"
+        t('services.service3.feature1'),
+        t('services.service3.feature2'),
+        t('services.service3.feature3'),
+        t('services.service3.feature4')
       ]
     },
     {
@@ -54,10 +54,10 @@ const ServicesSection = () => {
       title: t('services.service4.title'), 
       description: t('services.service4.description'),
       features: [
-        "Custom software solutions",
-        "Digital tool integration",
-        "Workflow automation",
-        "System optimization"
+        t('services.service4.feature1'),
+        t('services.service4.feature2'),
+        t('services.service4.feature3'),
+        t('services.service4.feature4')
       ]
     }
   ];
@@ -102,7 +102,7 @@ const ServicesSection = () => {
                 </div>
                 <div className="flex-1">
                   <div className="text-sm font-medium text-accent mb-1">
-                    Service {service.number}
+                    {t('services.service.label')} {service.number}
                   </div>
                   <h3 className="text-xl font-bold text-primary">
                     {service.title}
