@@ -192,9 +192,15 @@ const ContactSection = () => {
               <h3 className="text-2xl font-bold text-primary mb-4">
                 {t('contact.form.title')}
               </h3>
-              <p className="text-muted-foreground">
-                {t('contact.form.subtitle')}
-              </p>
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <p className="text-muted-foreground">
+                  {t('contact.form.subtitle')}
+                </p>
+                <div className="flex items-center gap-2 text-primary font-semibold">
+                  <Phone className="h-4 w-4" />
+                  <span>+56 9 6694 5349</span>
+                </div>
+              </div>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
