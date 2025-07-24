@@ -1,0 +1,162 @@
+import { 
+  Search, 
+  FileText, 
+  Cog, 
+  BarChart3
+} from "lucide-react";
+
+const ProcessSection = () => {
+  const processSteps = [
+    {
+      icon: <Search className="h-8 w-8" />,
+      title: "Initial Diagnosis",
+      description: "Comprehensive evaluation of your current processes, identifying critical points and improvement opportunities.",
+      details: [
+        "Current process evaluation",
+        "Critical point identification", 
+        "Improvement opportunity analysis"
+      ]
+    },
+    {
+      icon: <FileText className="h-8 w-8" />,
+      title: "Personalized Proposal",
+      description: "Detailed implementation plan with clear objectives and realistic timelines tailored to your specific needs.",
+      details: [
+        "Detailed implementation plan",
+        "Clear objective definition",
+        "Realistic timeline establishment"
+      ]
+    },
+    {
+      icon: <Cog className="h-8 w-8" />,
+      title: "Progressive Implementation", 
+      description: "Gradual solution integration with continuous team training and permanent technical support throughout the process.",
+      details: [
+        "Gradual solution integration",
+        "Continuous team training",
+        "Permanent technical support"
+      ]
+    },
+    {
+      icon: <BarChart3 className="h-8 w-8" />,
+      title: "Results Measurement",
+      description: "Established KPI tracking, project impact evaluation, and constant process optimization to ensure success.",
+      details: [
+        "Established KPI tracking", 
+        "Project impact evaluation",
+        "Constant process optimization"
+      ]
+    }
+  ];
+
+  return (
+    <section id="process" className="section-padding bg-muted/30">
+      <div className="container-custom">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            How We Work?
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Our proven methodology ensures successful implementation and measurable 
+            results through a structured, collaborative approach.
+          </p>
+        </div>
+
+        {/* Process Steps */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {processSteps.map((step, index) => (
+            <div key={index} className="relative">
+              {/* Connection Line */}
+              {index < processSteps.length - 1 && (
+                <div className="hidden lg:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-accent to-accent/30 z-0"></div>
+              )}
+              
+              {/* Step Card */}
+              <div className="professional-card p-6 text-center hover-lift relative z-10">
+                <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center text-accent mx-auto mb-6">
+                  {step.icon}
+                </div>
+                <div className="mb-4">
+                  <div className="text-sm font-medium text-accent mb-2">
+                    Step {index + 1}
+                  </div>
+                  <h3 className="text-xl font-bold text-primary">
+                    {step.title}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {step.description}
+                </p>
+                <div className="space-y-2">
+                  {step.details.map((detail, detailIndex) => (
+                    <div key={detailIndex} className="flex items-center text-sm text-muted-foreground">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mr-3"></div>
+                      {detail}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Timeline Visualization */}
+        <div className="bg-white rounded-2xl p-8 md:p-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-primary text-center mb-12">
+            Typical Implementation Timeline
+          </h3>
+          
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-accent/20"></div>
+            
+            <div className="space-y-12">
+              <div className="flex items-center">
+                <div className="w-16 h-16 rounded-full bg-accent flex items-center justify-center text-white font-bold text-lg mr-8">
+                  1
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-primary">Week 1-2: Discovery & Analysis</h4>
+                  <p className="text-muted-foreground">Complete assessment and proposal development</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center">
+                <div className="w-16 h-16 rounded-full bg-tech-blue flex items-center justify-center text-white font-bold text-lg mr-8">
+                  2
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-primary">Week 3-6: Setup & Training</h4>
+                  <p className="text-muted-foreground">Platform configuration and team onboarding</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center">
+                <div className="w-16 h-16 rounded-full bg-tech-green flex items-center justify-center text-white font-bold text-lg mr-8">
+                  3
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-primary">Week 7-12: Implementation</h4>
+                  <p className="text-muted-foreground">Gradual rollout with continuous support</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center">
+                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg mr-8">
+                  4
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-primary">Ongoing: Optimization</h4>
+                  <p className="text-muted-foreground">Continuous improvement and support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProcessSection;
