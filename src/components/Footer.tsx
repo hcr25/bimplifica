@@ -12,10 +12,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
-                <span className="text-white font-bold text-xl">B</span>
-              </div>
-              <span className="text-3xl font-bold">IMPLIFICA</span>
+              <img 
+                src="/lovable-uploads/f9d11641-9fab-40b4-b6cf-b76a72e4cb76.png" 
+                alt="BIMPLIFICA Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-white/80 mb-6 leading-relaxed max-w-md">
               {t('footer.description')}
