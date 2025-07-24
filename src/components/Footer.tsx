@@ -1,4 +1,4 @@
-import { Mail, Globe, MapPin, Phone, Linkedin, Twitter } from "lucide-react";
+import { Mail, Globe, MapPin, Phone, Linkedin, Twitter, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Footer = () => {
@@ -36,16 +36,16 @@ const Footer = () => {
                 <span className="text-white/80">contacto@bimplifica.cl</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Globe className="h-5 w-5 text-accent" />
+                <MapPin className="h-5 w-5 text-accent" />
+                <span className="text-white/80">Santiago, Chile</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <ExternalLink className="h-5 w-5 text-accent" />
                 <span className="text-white/80">www.bimplifica.cl</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent" />
                 <span className="text-white/80">+56 9 6694 5349</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-accent" />
-                <span className="text-white/80">Santiago, Chile</span>
               </div>
             </div>
           </div>
