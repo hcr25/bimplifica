@@ -54,6 +54,8 @@ export default {
 				},
 				'tech-blue': 'hsl(var(--tech-blue))',
 				'tech-green': 'hsl(var(--tech-green))',
+				'nav-active': 'hsl(var(--nav-active))',
+				'nav-active-foreground': 'hsl(var(--nav-active-foreground))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

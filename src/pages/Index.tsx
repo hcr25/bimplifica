@@ -40,14 +40,30 @@ const Index = () => {
         <Header />
         
         <main>
-          <HeroSection />
-          <AboutSection />
-          <ServicesSection />
-          <BimSection />
-          <SystemSection />
-          <ResultsSection />
-          <ProcessSection />
-          <ContactSection />
+          <section id="home" data-section="home">
+            <HeroSection />
+          </section>
+          <section id="about" data-section="about">
+            <AboutSection />
+          </section>
+          <section id="services" data-section="services">
+            <ServicesSection />
+          </section>
+          <section id="bim" data-section="bim">
+            <BimSection />
+          </section>
+          <section id="system" data-section="system">
+            <SystemSection />
+          </section>
+          <section id="results" data-section="results">
+            <ResultsSection />
+          </section>
+          <section id="process" data-section="process">
+            <ProcessSection />
+          </section>
+          <section id="contact" data-section="contact">
+            <ContactSection />
+          </section>
         </main>
         
         <Footer />

@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   const { language, setLanguage, t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
@@ -14,6 +15,53 @@ const Header = () => {
       setIsMenuOpen(false);
     }
   };
+
+  // ScrollSpy functionality
+  useEffect(() => {
+    const sections = ['home', 'about', 'services', 'bim', 'system', 'results', 'process', 'contact'];
+    // Map sections to their corresponding nav items  
+    const sectionToNavMap: Record<string, string> = {
+      'home': 'home',
+      'about': 'about', 
+      'services': 'services',
+      'bim': 'services', // BIM section maps to services nav
+      'system': 'system',
+      'results': 'results',
+      'process': 'results', // Process section maps to results nav
+      'contact': 'contact'
+    };
+    
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      const visibleSections = entries
+        .filter(entry => entry.isIntersecting)
+        .map(entry => ({
+          id: entry.target.getAttribute('data-section') || entry.target.id,
+          top: entry.boundingClientRect.top
+        }))
+        .sort((a, b) => Math.abs(a.top) - Math.abs(b.top));
+
+      if (visibleSections.length > 0) {
+        const closestSection = visibleSections[0].id;
+        const navSection = sectionToNavMap[closestSection] || closestSection;
+        setActiveSection(navSection);
+      }
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.1,
+      rootMargin: '-50px 0px -50% 0px' // Trigger when section is 50px below viewport
+    });
+
+    // Observe all sections
+    sections.forEach(sectionId => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
@@ -32,37 +80,37 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-accent transition-colors font-medium"
+              className={`nav-link ${activeSection === 'home' ? 'active' : ''}`}
             >
               {t('nav.home')}
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-accent transition-colors font-medium"
+              className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
             >
               {t('nav.about')}
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-accent transition-colors font-medium"
+              className={`nav-link ${activeSection === 'services' ? 'active' : ''}`}
             >
               {t('nav.services')}
             </button>
             <button 
               onClick={() => scrollToSection('system')}
-              className="text-foreground hover:text-accent transition-colors font-medium"
+              className={`nav-link ${activeSection === 'system' ? 'active' : ''}`}
             >
               {t('nav.platform')}
             </button>
             <button 
               onClick={() => scrollToSection('results')}
-              className="text-foreground hover:text-accent transition-colors font-medium"
+              className={`nav-link ${activeSection === 'results' ? 'active' : ''}`}
             >
               {t('nav.results')}
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-accent transition-colors font-medium"
+              className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`}
             >
               {t('nav.contact')}
             </button>
@@ -110,37 +158,37 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('home')}
-                className="text-left text-foreground hover:text-accent transition-colors font-medium"
+                className={`text-left nav-link-mobile ${activeSection === 'home' ? 'active' : ''}`}
               >
                 {t('nav.home')}
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-left text-foreground hover:text-accent transition-colors font-medium"
+                className={`text-left nav-link-mobile ${activeSection === 'about' ? 'active' : ''}`}
               >
                 {t('nav.about')}
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
-                className="text-left text-foreground hover:text-accent transition-colors font-medium"
+                className={`text-left nav-link-mobile ${activeSection === 'services' ? 'active' : ''}`}
               >
                 {t('nav.services')}
               </button>
               <button 
                 onClick={() => scrollToSection('system')}
-                className="text-left text-foreground hover:text-accent transition-colors font-medium"
+                className={`text-left nav-link-mobile ${activeSection === 'system' ? 'active' : ''}`}
               >
                 {t('nav.platform')}
               </button>
               <button 
                 onClick={() => scrollToSection('results')}
-                className="text-left text-foreground hover:text-accent transition-colors font-medium"
+                className={`text-left nav-link-mobile ${activeSection === 'results' ? 'active' : ''}`}
               >
                 {t('nav.results')}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-left text-foreground hover:text-accent transition-colors font-medium"
+                className={`text-left nav-link-mobile ${activeSection === 'contact' ? 'active' : ''}`}
               >
                 {t('nav.contact')}
               </button>

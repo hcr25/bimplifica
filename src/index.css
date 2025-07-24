@@ -58,6 +58,10 @@
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
     
+    /* ScrollSpy Navigation */
+    --nav-active: 25 100% 50%;         /* Orange #ff6a00 */
+    --nav-active-foreground: 0 0% 100%;
+
     /* Animations */
     --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
@@ -101,6 +105,7 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    padding-top: 64px; /* Account for fixed header height */
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -204,5 +209,36 @@
   .fade-in-right.animate {
     opacity: 1;
     transform: translateX(0);
+  }
+
+  /* ScrollSpy Navigation Styles */
+  .nav-link {
+    @apply relative transition-all duration-300 font-medium;
+    color: hsl(var(--foreground));
+  }
+
+  .nav-link:hover {
+    color: hsl(var(--accent));
+  }
+
+  .nav-link.active {
+    color: hsl(var(--nav-active));
+  }
+
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: hsl(var(--nav-active));
+    border-radius: 1px;
+  }
+
+  /* Mobile nav active state */
+  .nav-link-mobile.active {
+    color: hsl(var(--nav-active));
+    font-weight: 600;
   }
 }
