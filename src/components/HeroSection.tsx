@@ -2,26 +2,22 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-construction-bim.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
-
 const HeroSection = () => {
-  const { t } = useLanguage();
-  
+  const {
+    t
+  } = useLanguage();
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Dynamic Background with Morphing Shape */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="Construction site with BIM technology" 
-          className="w-full h-full object-cover opacity-30 mix-blend-overlay"
-        />
+        <img src={heroImage} alt="Construction site with BIM technology" className="w-full h-full object-cover opacity-30 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-purple-900/30 to-orange-900/40"></div>
         
         {/* Floating Morphing Background Element */}
@@ -31,7 +27,7 @@ const HeroSection = () => {
 
       {/* Revolutionary Content Layout */}
       <div className="container-professional relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 lg:gap-12 items-center min-h-screen py-2 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 lg:gap-12 items-center min-h-screen py-2 lg:py-20 rounded-none">
           
           {/* Main Content - Typography Experiment */}
           <div className="lg:col-span-8 space-y-3 lg:space-y-12">
@@ -67,10 +63,7 @@ const HeroSection = () => {
 
             {/* Futuristic CTA - Touch Optimized */}
             <div className="animate-slide-up-3 pt-2 lg:pt-8 pb-1 lg:pb-2">
-              <button 
-                onClick={scrollToContact}
-                className="group relative overflow-hidden bg-gradient-to-r from-accent to-orange-600 text-black px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-full font-space font-medium text-base sm:text-lg tracking-wide transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-accent/50 active:scale-95 touch-manipulation"
-              >
+              <button onClick={scrollToContact} className="group relative overflow-hidden bg-gradient-to-r from-accent to-orange-600 text-black px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-full font-space font-medium text-base sm:text-lg tracking-wide transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-accent/50 active:scale-95 touch-manipulation">
                 <span className="relative z-10">{t('hero.cta1')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </button>
@@ -83,13 +76,17 @@ const HeroSection = () => {
             
             {/* Mobile: Horizontal Layout */}
             <div className="lg:hidden grid grid-cols-3 gap-1 animate-slide-up-3">
-              {[
-                { value: "30%", label: t('hero.stat1') },
-                { value: "40%", label: t('hero.stat2') },
-                { value: "25%", label: t('hero.stat3') }
-              ].map((stat, index) => (
-                <div key={index} className="group text-center">
-                  <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-lg p-2 hover:bg-white/10 transition-all duration-500 hover:scale-105">
+              {[{
+              value: "30%",
+              label: t('hero.stat1')
+            }, {
+              value: "40%",
+              label: t('hero.stat2')
+            }, {
+              value: "25%",
+              label: t('hero.stat3')
+            }].map((stat, index) => <div key={index} className="group text-center">
+                  <div className="bg-white/5 backdrop-blur-lg border border-white/10 p-2 hover:bg-white/10 transition-all duration-500 hover:scale-85 rounded-lg my-0 py-[8px]">
                     <div className="font-mono text-xl sm:text-2xl font-light text-accent mb-1 group-hover:animate-text-glow">
                       {stat.value}
                     </div>
@@ -97,18 +94,21 @@ const HeroSection = () => {
                       {stat.label}
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* Desktop: Vertical Floating Layout */}
             <div className="hidden lg:block space-y-8 animate-float">
-              {[
-                { value: "30%", label: t('hero.stat1') },
-                { value: "40%", label: t('hero.stat2') },
-                { value: "25%", label: t('hero.stat3') }
-              ].map((stat, index) => (
-                <div key={index} className="group">
+              {[{
+              value: "30%",
+              label: t('hero.stat1')
+            }, {
+              value: "40%",
+              label: t('hero.stat2')
+            }, {
+              value: "25%",
+              label: t('hero.stat3')
+            }].map((stat, index) => <div key={index} className="group">
                   <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 lg:p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105">
                     <div className="font-mono text-5xl lg:text-6xl font-light text-accent mb-4 group-hover:animate-text-glow">
                       {stat.value}
@@ -117,16 +117,13 @@ const HeroSection = () => {
                       {stat.label}
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
           </div>
 
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
