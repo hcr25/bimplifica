@@ -31,10 +31,10 @@ const HeroSection = () => {
 
       {/* Revolutionary Content Layout */}
       <div className="container-professional relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-12 items-center min-h-screen py-8 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-12 items-center min-h-screen py-4 lg:py-20">
           
           {/* Main Content - Typography Experiment */}
-          <div className="lg:col-span-8 space-y-3 lg:space-y-12">
+          <div className="lg:col-span-8 space-y-2 lg:space-y-12">
             
             {/* Glowing Tech Badge */}
             <div className="inline-flex items-center animate-slide-up-1">
@@ -66,7 +66,7 @@ const HeroSection = () => {
             </div>
 
             {/* Futuristic CTA - Touch Optimized */}
-            <div className="animate-slide-up-3 pt-1 lg:pt-8">
+            <div className="animate-slide-up-3 pt-0 lg:pt-8">
               <button 
                 onClick={scrollToContact}
                 className="group relative overflow-hidden bg-gradient-to-r from-accent to-orange-600 text-black px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-full font-space font-medium text-base sm:text-lg tracking-wide transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-accent/50 active:scale-95 touch-manipulation"
@@ -79,17 +79,17 @@ const HeroSection = () => {
           </div>
 
           {/* Stats Section - Mobile & Desktop Optimized */}
-          <div className="lg:col-span-4 mt-2 lg:mt-0">
+          <div className="lg:col-span-4 mt-1 lg:mt-0">
             
             {/* Mobile: Horizontal Layout */}
-            <div className="lg:hidden grid grid-cols-3 gap-2 animate-slide-up-3">
+            <div className="lg:hidden grid grid-cols-3 gap-1 animate-slide-up-3">
               {[
                 { value: "30%", label: t('hero.stat1') },
                 { value: "40%", label: t('hero.stat2') },
                 { value: "25%", label: t('hero.stat3') }
               ].map((stat, index) => (
                 <div key={index} className="group text-center">
-                  <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-3 hover:bg-white/10 transition-all duration-500 hover:scale-105">
+                  <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-2 hover:bg-white/10 transition-all duration-500 hover:scale-105">
                     <div className="font-mono text-2xl sm:text-3xl font-light text-accent mb-2 group-hover:animate-text-glow">
                       {stat.value}
                     </div>
