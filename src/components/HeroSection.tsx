@@ -34,7 +34,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-12 items-center min-h-screen py-4 lg:py-20">
           
           {/* Main Content - Typography Experiment */}
-          <div className="lg:col-span-8 space-y-2 lg:space-y-12">
+          <div className="lg:col-span-8 space-y-6 lg:space-y-12">
             
             {/* Glowing Tech Badge */}
             <div className="inline-flex items-center animate-slide-up-1">
@@ -58,7 +58,7 @@ const HeroSection = () => {
             </div>
 
             {/* Innovative Description with Mono Font - Mobile Optimized */}
-            <div className="animate-slide-up-3 max-w-4xl">
+            <div className="animate-slide-up-3 max-w-4xl py-2 lg:py-4">
               <p className="font-mono text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/80 leading-relaxed tracking-wide">
                 <span className="text-accent">/// </span>
                 {t('hero.subtitle')}
@@ -66,7 +66,7 @@ const HeroSection = () => {
             </div>
 
             {/* Futuristic CTA - Touch Optimized */}
-            <div className="animate-slide-up-3 pt-0 lg:pt-8">
+            <div className="animate-slide-up-3 pt-4 lg:pt-8">
               <button 
                 onClick={scrollToContact}
                 className="group relative overflow-hidden bg-gradient-to-r from-accent to-orange-600 text-black px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-full font-space font-medium text-base sm:text-lg tracking-wide transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-accent/50 active:scale-95 touch-manipulation"
@@ -79,7 +79,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats Section - Mobile & Desktop Optimized */}
-          <div className="lg:col-span-4 mt-1 lg:mt-0">
+          <div className="lg:col-span-4 mt-8 lg:mt-0">
             
             {/* Mobile: Horizontal Layout */}
             <div className="lg:hidden grid grid-cols-3 gap-1 animate-slide-up-3">
