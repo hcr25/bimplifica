@@ -14,62 +14,78 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Minimal Overlay */}
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50">
+      {/* Background Image with Professional Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
           alt="Construction site with BIM technology" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 to-slate-800/90"></div>
       </div>
 
-      {/* Content - Typography Focused */}
-      <div className="container-professional relative z-10 text-center text-white">
-        <div className="max-w-5xl mx-auto">
+      {/* Clean Minimal Content */}
+      <div className="container-professional relative z-10 text-center">
+        <div className="max-w-6xl mx-auto space-y-12">
           
-          {/* Minimal Typography Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight mb-8 leading-[0.9]">
-            <span className="block text-white font-extralight">{t('hero.title1')}</span>
-            <span className="block text-white/90 text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-4 font-light">{t('hero.title2')}</span>
-          </h1>
+          {/* Professional Badge */}
+          <div className="inline-flex items-center px-8 py-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
+            <span className="text-sm font-light text-white/90 tracking-wide">{t('hero.badge')}</span>
+          </div>
 
-          {/* Clean Subheadline */}
-          <p className="text-lg md:text-xl lg:text-2xl mb-16 text-white/80 max-w-4xl mx-auto leading-relaxed font-light">
+          {/* Minimal Typography Headline */}
+          <div className="space-y-8">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extralight text-white leading-[0.85] tracking-tight">
+              {t('hero.title1')}
+            </h1>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-accent leading-tight">
+              {t('hero.title2')}
+            </h2>
+          </div>
+
+          {/* Clean Description */}
+          <p className="text-xl md:text-2xl lg:text-3xl font-light text-white/80 max-w-5xl mx-auto leading-relaxed">
             {t('hero.subtitle')}
           </p>
 
-          {/* Single Minimal CTA */}
-          <div className="flex justify-center mb-20">
+          {/* Single Professional CTA */}
+          <div className="pt-8">
             <Button 
-              variant="outline" 
-              size="lg"
               onClick={scrollToContact}
-              className="bg-transparent border-white/30 text-white hover:bg-white hover:text-primary px-12 py-4 text-base font-light tracking-wide transition-all duration-300"
+              className="bg-accent hover:bg-accent/90 text-white px-16 py-6 text-lg font-light tracking-wide rounded-full transition-all duration-500 hover:scale-105 shadow-2xl"
             >
               {t('hero.cta1')}
             </Button>
           </div>
 
-          {/* Minimal Key Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-extralight text-white mb-3">30%</div>
-              <div className="text-white/60 text-sm lg:text-base font-light tracking-wide uppercase">{t('hero.stat1')}</div>
+        </div>
+
+        {/* Minimal Statistics */}
+        <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 w-full max-w-5xl">
+          <div className="grid grid-cols-3 gap-16 text-center">
+            <div>
+              <div className="text-5xl lg:text-6xl font-extralight text-accent mb-4">30%</div>
+              <div className="text-white/60 text-sm lg:text-base font-light tracking-widest uppercase">
+                {t('hero.stat1')}
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-extralight text-white mb-3">40%</div>
-              <div className="text-white/60 text-sm lg:text-base font-light tracking-wide uppercase">{t('hero.stat2')}</div>
+            <div>
+              <div className="text-5xl lg:text-6xl font-extralight text-accent mb-4">40%</div>
+              <div className="text-white/60 text-sm lg:text-base font-light tracking-widest uppercase">
+                {t('hero.stat2')}
+              </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-extralight text-white mb-3">25%</div>
-              <div className="text-white/60 text-sm lg:text-base font-light tracking-wide uppercase">{t('hero.stat3')}</div>
+            <div>
+              <div className="text-5xl lg:text-6xl font-extralight text-accent mb-4">25%</div>
+              <div className="text-white/60 text-sm lg:text-base font-light tracking-widest uppercase">
+                {t('hero.stat3')}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </section>
   );
 };
