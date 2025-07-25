@@ -79,7 +79,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats Section - Mobile & Desktop Optimized */}
-          <div className="lg:col-span-4 mt-4 lg:mt-0">
+          <div className="lg:col-span-4 mt-2 lg:mt-0">
             
             {/* Mobile: Horizontal Layout */}
             <div className="lg:hidden grid grid-cols-3 gap-2 animate-slide-up-3">
