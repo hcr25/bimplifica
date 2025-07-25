@@ -72,7 +72,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/1832ebc8-70ac-4323-b61d-1fbf64e29194.png" 
               alt="BIMPLIFICA Logo" 
-              className="h-8 lg:h-10 w-auto brightness-0 invert"
+              className="h-8 lg:h-10 w-auto filter drop-shadow-lg"
             />
           </div>
 
