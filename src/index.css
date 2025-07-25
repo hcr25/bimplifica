@@ -222,10 +222,9 @@
     transform: translateX(0);
   }
 
-  /* ScrollSpy Navigation Styles */
+  /* Modern Navigation Styles */
   .nav-link {
-    @apply relative transition-all duration-300 font-medium;
-    color: hsl(var(--foreground));
+    @apply relative transition-all duration-300 font-space font-medium text-white/80 hover:text-white;
   }
 
   .nav-link:hover {
@@ -233,23 +232,17 @@
   }
 
   .nav-link.active {
-    color: hsl(var(--nav-active));
+    color: hsl(var(--accent));
   }
 
   .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: -8px;
     left: 0;
     right: 0;
     height: 2px;
-    background-color: hsl(var(--nav-active));
+    background: linear-gradient(90deg, hsl(var(--accent)), transparent);
     border-radius: 1px;
-  }
-
-  /* Mobile nav active state */
-  .nav-link-mobile.active {
-    color: hsl(var(--nav-active));
-    font-weight: 600;
   }
 }
