@@ -34,7 +34,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 lg:gap-12 items-center min-h-screen py-2 lg:py-20">
           
           {/* Main Content - Typography Experiment */}
-          <div className="lg:col-span-8 space-y-2 lg:space-y-12">
+          <div className="lg:col-span-8 space-y-2 lg:space-y-4">
             
             {/* Glowing Tech Badge */}
             <div className="inline-flex items-center animate-slide-up-1">
@@ -66,7 +66,7 @@ const HeroSection = () => {
             </div>
 
             {/* Futuristic CTA - Touch Optimized */}
-            <div className="animate-slide-up-3 pt-1 lg:pt-8 pb-1 lg:pb-2">
+            <div className="animate-slide-up-3 pt-1 lg:pt-1 pb-0 lg:pb-2">
               <button 
                 onClick={scrollToContact}
                 className="group relative overflow-hidden bg-gradient-to-r from-accent to-orange-600 text-black px-6 sm:px-10 lg:px-12 py-3 sm:py-5 lg:py-6 rounded-full font-space font-medium text-sm sm:text-lg tracking-wide transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-accent/50 active:scale-95 touch-manipulation"
@@ -79,7 +79,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats Section - Mobile & Desktop Optimized */}
-          <div className="lg:col-span-4 mt-2 lg:mt-0">
+          <div className="lg:col-span-4 mt-2 lg:mt-6">
             
             {/* Mobile: Horizontal Layout */}
             <div className="lg:hidden grid grid-cols-3 gap-1 animate-slide-up-3">
