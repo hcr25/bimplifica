@@ -31,14 +31,14 @@ const HeroSection = () => {
 
       {/* Revolutionary Content Layout */}
       <div className="container-professional relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-12 items-center min-h-screen py-4 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 lg:gap-12 items-center min-h-screen py-2 lg:py-20">
           
           {/* Main Content - Typography Experiment */}
-          <div className="lg:col-span-8 space-y-3 lg:space-y-12">
+          <div className="lg:col-span-8 space-y-2 lg:space-y-12">
             
             {/* Glowing Tech Badge */}
             <div className="inline-flex items-center animate-slide-up-1">
-              <div className="px-4 lg:px-6 py-2 lg:py-3 bg-gradient-to-r from-accent/20 to-purple-500/20 backdrop-blur-sm border border-accent/30 rounded-full">
+              <div className="px-3 lg:px-6 py-1.5 lg:py-3 bg-gradient-to-r from-accent/20 to-purple-500/20 backdrop-blur-sm border border-accent/30 rounded-full">
                 <span className="font-mono text-xs lg:text-sm text-accent tracking-widest uppercase animate-text-glow">
                   {t('hero.badge')}
                 </span>
@@ -46,30 +46,30 @@ const HeroSection = () => {
             </div>
 
             {/* Experimental Typography Layout - Responsive */}
-            <div className="space-y-1 lg:space-y-8 animate-slide-up-2">
+            <div className="space-y-0 lg:space-y-8 animate-slide-up-2">
               <h1 className="font-space font-light tracking-tighter leading-[0.8]">
-                <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] text-white">
+                <span className="block text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] text-white">
                   {t('hero.title1')}
                 </span>
-                <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl text-transparent bg-gradient-to-r from-accent via-purple-400 to-blue-400 bg-clip-text font-medium ml-2 sm:ml-4 lg:ml-8 xl:ml-16 mt-0 lg:mt-4">
+                <span className="block text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl text-transparent bg-gradient-to-r from-accent via-purple-400 to-blue-400 bg-clip-text font-medium ml-2 sm:ml-4 lg:ml-8 xl:ml-16 -mt-1 lg:mt-4">
                   {t('hero.title2')}
                 </span>
               </h1>
             </div>
 
             {/* Innovative Description with Mono Font - Mobile Optimized */}
-            <div className="animate-slide-up-3 max-w-4xl py-1 lg:py-4">
-              <p className="font-mono text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/80 leading-relaxed tracking-wide">
+            <div className="animate-slide-up-3 max-w-4xl py-0 lg:py-4">
+              <p className="font-mono text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl text-white/80 leading-relaxed tracking-wide">
                 <span className="text-accent">/// </span>
                 {t('hero.subtitle')}
               </p>
             </div>
 
             {/* Futuristic CTA - Touch Optimized */}
-            <div className="animate-slide-up-3 pt-2 lg:pt-8 pb-2 lg:pb-2">
+            <div className="animate-slide-up-3 pt-1 lg:pt-8 pb-1 lg:pb-2">
               <button 
                 onClick={scrollToContact}
-                className="group relative overflow-hidden bg-gradient-to-r from-accent to-orange-600 text-black px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-full font-space font-medium text-base sm:text-lg tracking-wide transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-accent/50 active:scale-95 touch-manipulation"
+                className="group relative overflow-hidden bg-gradient-to-r from-accent to-orange-600 text-black px-6 sm:px-10 lg:px-12 py-3 sm:py-5 lg:py-6 rounded-full font-space font-medium text-sm sm:text-lg tracking-wide transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-accent/50 active:scale-95 touch-manipulation"
               >
                 <span className="relative z-10">{t('hero.cta1')}</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -79,7 +79,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats Section - Mobile & Desktop Optimized */}
-          <div className="lg:col-span-4 mt-0 lg:mt-0">
+          <div className="lg:col-span-4 mt-2 lg:mt-0">
             
             {/* Mobile: Horizontal Layout */}
             <div className="lg:hidden grid grid-cols-3 gap-1 animate-slide-up-3">
