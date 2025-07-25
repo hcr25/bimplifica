@@ -31,10 +31,10 @@ const HeroSection = () => {
 
       {/* Revolutionary Content Layout */}
       <div className="container-professional relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-12 items-center min-h-screen py-4 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 lg:gap-12 items-center min-h-screen py-2 lg:py-20">
           
           {/* Main Content - Typography Experiment */}
-          <div className="lg:col-span-8 space-y-6 lg:space-y-12">
+          <div className="lg:col-span-8 space-y-3 lg:space-y-12">
             
             {/* Glowing Tech Badge */}
             <div className="inline-flex items-center animate-slide-up-1">
@@ -58,7 +58,7 @@ const HeroSection = () => {
             </div>
 
             {/* Innovative Description with Mono Font - Mobile Optimized */}
-            <div className="animate-slide-up-3 max-w-4xl py-2 lg:py-4">
+            <div className="animate-slide-up-3 max-w-4xl py-1 lg:py-4">
               <p className="font-mono text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white/80 leading-relaxed tracking-wide">
                 <span className="text-accent">/// </span>
                 {t('hero.subtitle')}
@@ -66,7 +66,7 @@ const HeroSection = () => {
             </div>
 
             {/* Futuristic CTA - Touch Optimized */}
-            <div className="animate-slide-up-3 pt-4 lg:pt-8">
+            <div className="animate-slide-up-3 pt-2 lg:pt-8">
               <button 
                 onClick={scrollToContact}
                 className="group relative overflow-hidden bg-gradient-to-r from-accent to-orange-600 text-black px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 rounded-full font-space font-medium text-base sm:text-lg tracking-wide transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-accent/50 active:scale-95 touch-manipulation"
@@ -79,7 +79,7 @@ const HeroSection = () => {
           </div>
 
           {/* Stats Section - Mobile & Desktop Optimized */}
-          <div className="lg:col-span-4 mt-8 lg:mt-0">
+          <div className="lg:col-span-4 mt-3 lg:mt-0">
             
             {/* Mobile: Horizontal Layout */}
             <div className="lg:hidden grid grid-cols-3 gap-1 animate-slide-up-3">
@@ -89,8 +89,8 @@ const HeroSection = () => {
                 { value: "25%", label: t('hero.stat3') }
               ].map((stat, index) => (
                 <div key={index} className="group text-center">
-                  <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-2 hover:bg-white/10 transition-all duration-500 hover:scale-105">
-                    <div className="font-mono text-2xl sm:text-3xl font-light text-accent mb-2 group-hover:animate-text-glow">
+                  <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-lg p-2 hover:bg-white/10 transition-all duration-500 hover:scale-105">
+                    <div className="font-mono text-xl sm:text-2xl font-light text-accent mb-1 group-hover:animate-text-glow">
                       {stat.value}
                     </div>
                     <div className="font-space text-white/70 text-xs tracking-wider uppercase leading-tight">
