@@ -34,43 +34,43 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-white text-6xl md:text-8xl block mb-2 drop-shadow-sm">{t('hero.title1')}</span>
-            <span className="text-accent block">{t('hero.title2')}</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+            <span className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl block mb-2 drop-shadow-sm">{t('hero.title1')}</span>
+            <span className="text-accent block text-2xl sm:text-3xl md:text-4xl lg:text-6xl">{t('hero.title2')}</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed px-4">
             {t('hero.subtitle')}
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
             <Button 
               variant="hero" 
               size="lg"
               onClick={scrollToContact}
-              className="text-lg px-8 py-4 h-auto"
+              className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto w-full sm:w-auto max-w-sm"
             >
               {t('hero.cta1')}
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
             </Button>
             
           </div>
 
           {/* Key Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 px-4">
             <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">30%</div>
-              <div className="text-white/80">{t('hero.stat1')}</div>
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">30%</div>
+              <div className="text-white/80 text-sm sm:text-base">{t('hero.stat1')}</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">40%</div>
-              <div className="text-white/80">{t('hero.stat2')}</div>
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">40%</div>
+              <div className="text-white/80 text-sm sm:text-base">{t('hero.stat2')}</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">25%</div>
-              <div className="text-white/80">{t('hero.stat3')}</div>
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">25%</div>
+              <div className="text-white/80 text-sm sm:text-base">{t('hero.stat3')}</div>
             </div>
           </div>
         </div>
