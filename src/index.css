@@ -6,48 +6,48 @@
 
 @layer base {
   :root {
-    /* Brand Colors */
-    --primary: 214 80% 20%;        /* Deep Navy Blue */
-    --primary-foreground: 0 0% 100%;
-    --accent: 25 95% 53%;          /* BIMPLIFICA Orange */
-    --accent-foreground: 0 0% 100%;
+    /* Professional Monochrome Palette */
+    --primary: 220 9% 15%;           /* Deep charcoal */
+    --primary-foreground: 0 0% 98%;
+    --accent: 220 9% 25%;            /* Medium charcoal */
+    --accent-foreground: 0 0% 98%;
     
-    /* Background & Surface */
+    /* Background & Surface - Clean whites */
     --background: 0 0% 100%;
-    --foreground: 214 80% 20%;
+    --foreground: 220 9% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 214 80% 20%;
+    --card-foreground: 220 9% 15%;
     
-    /* Neutral Grays */
-    --muted: 210 15% 96%;
-    --muted-foreground: 214 25% 45%;
-    --secondary: 210 15% 96%;
-    --secondary-foreground: 214 80% 20%;
+    /* Sophisticated Grays */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 9% 15%;
     
-    /* Technical Accents */
-    --tech-blue: 197 100% 48%;     /* Bright tech blue for BIM elements */
-    --tech-green: 142 71% 45%;     /* Success/efficiency green */
+    /* Minimal Technical Accents */
+    --tech-blue: 220 9% 35%;         /* Subtle tech blue */
+    --tech-green: 142 35% 55%;       /* Muted green */
     
-    /* Interactive Elements */
-    --border: 214 20% 88%;
-    --input: 214 20% 88%;
-    --ring: 214 80% 20%;
+    /* Clean Interactive Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 9% 15%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(214 80% 20%), hsl(214 65% 35%));
-    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 85% 60%));
-    --gradient-tech: linear-gradient(135deg, hsl(197 100% 48%), hsl(214 80% 20%));
+    /* Minimal Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 14% 96%));
+    --gradient-accent: linear-gradient(135deg, hsl(220 14% 96%), hsl(220 13% 91%));
+    --gradient-tech: linear-gradient(135deg, hsl(220 14% 96%), hsl(0 0% 100%));
     
-    /* Shadows & Effects */
-    --shadow-soft: 0 4px 16px -4px hsl(214 80% 20% / 0.1);
-    --shadow-strong: 0 8px 32px -8px hsl(214 80% 20% / 0.2);
-    --shadow-accent: 0 4px 16px -4px hsl(25 95% 53% / 0.3);
+    /* Sophisticated Shadows */
+    --shadow-soft: 0 1px 3px 0 hsl(220 9% 15% / 0.1);
+    --shadow-strong: 0 4px 12px 0 hsl(220 9% 15% / 0.15);
+    --shadow-accent: 0 2px 8px 0 hsl(220 9% 15% / 0.12);
     
-    /* Spacing & Layout */
-    --radius: 0.75rem;
-    --container-max: 1200px;
+    /* Layout & Spacing */
+    --radius: 0.5rem;
+    --container-max: 1400px;
     
-    /* Typography Scale */
+    /* Professional Typography Scale */
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
@@ -57,43 +57,45 @@
     --font-size-3xl: 1.875rem;
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
+    --font-size-6xl: 3.75rem;
+    --font-size-7xl: 4.5rem;
     
-    /* ScrollSpy Navigation */
-    --nav-active: 25 100% 50%;         /* Orange #ff6a00 */
-    --nav-active-foreground: 0 0% 100%;
+    /* Navigation */
+    --nav-active: 220 9% 15%;
+    --nav-active-foreground: 0 0% 98%;
 
-    /* Animations */
-    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Refined Animations */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* Professional Elements */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    /* System Elements */
+    --destructive: 0 73% 60%;
+    --destructive-foreground: 0 0% 98%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 214 80% 20%;
+    --popover-foreground: 220 9% 15%;
   }
 
   .dark {
-    --background: 214 80% 8%;
+    --background: 220 9% 9%;
     --foreground: 0 0% 98%;
-    --card: 214 50% 12%;
+    --card: 220 9% 11%;
     --card-foreground: 0 0% 98%;
-    --popover: 214 50% 12%;
+    --popover: 220 9% 11%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
-    --primary-foreground: 214 80% 20%;
-    --secondary: 214 30% 18%;
+    --primary-foreground: 220 9% 9%;
+    --secondary: 220 9% 15%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 214 30% 18%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 25 95% 53%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 214 30% 18%;
-    --input: 214 30% 18%;
-    --ring: 215 20% 65%;
+    --muted: 220 9% 15%;
+    --muted-foreground: 220 5% 65%;
+    --accent: 220 9% 85%;
+    --accent-foreground: 220 9% 9%;
+    --destructive: 0 73% 70%;
+    --destructive-foreground: 220 9% 9%;
+    --border: 220 9% 15%;
+    --input: 220 9% 15%;
+    --ring: 220 5% 65%;
   }
 }
 
@@ -105,6 +107,9 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.6;
     padding-top: 64px; /* Account for fixed header height on mobile */
   }
   
@@ -115,8 +120,15 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold text-foreground;
+    @apply font-light text-foreground;
+    letter-spacing: -0.05em;
+    line-height: 1.2;
   }
+  
+  h1 { @apply text-5xl md:text-6xl lg:text-7xl; }
+  h2 { @apply text-3xl md:text-4xl lg:text-5xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
 }
 
 @layer components {
@@ -156,14 +168,14 @@
     box-shadow: var(--shadow-strong);
   }
   
-  /* Section Spacing */
+  /* Generous Section Spacing */
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-32;
   }
   
-  /* Container */
+  /* Wide Container for Sophistication */
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-6xl mx-auto px-6 sm:px-8 lg:px-12;
   }
 }
 
