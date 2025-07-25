@@ -83,15 +83,15 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Process Flow */}
-        <div className="mb-16">
-          <div className="flex justify-center items-center space-x-4 mb-12">
+        <div className="mb-12 sm:mb-16">
+          <div className="flex justify-center items-center space-x-2 sm:space-x-4 mb-8 sm:mb-12 px-4">
             {services.map((_, index) => (
               <div key={index} className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-sm sm:text-base md:text-lg">
                   {index + 1}
                 </div>
                 {index < services.length - 1 && (
-                  <ArrowRight className="h-6 w-6 text-muted-foreground mx-4" />
+                  <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-muted-foreground mx-1 sm:mx-2 md:mx-4" />
                 )}
               </div>
             ))}
