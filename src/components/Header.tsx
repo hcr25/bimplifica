@@ -69,11 +69,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/b6db53b9-6577-4866-bd9c-945cd6f8ffe2.png" 
-              alt="BIMPLIFICA Logo" 
-              className="h-12 w-auto"
-            />
+              <img 
+                src="/lovable-uploads/f6153a0e-c717-40e6-b004-39e809379f34.png" 
+                alt="BIMPLIFICA Logo" 
+                className="h-12 w-auto"
+              />
           </div>
 
           {/* Desktop Navigation */}
