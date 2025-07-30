@@ -64,15 +64,15 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg border-b border-white/10">
-      <div className="container-professional">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+      <div className="container-custom">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/1832ebc8-70ac-4323-b61d-1fbf64e29194.png" 
               alt="BIMPLIFICA Logo" 
-              className="h-8 lg:h-10 w-auto filter drop-shadow-lg"
+              className="h-8 w-auto"
             />
           </div>
 
@@ -118,13 +118,13 @@ const Header = () => {
 
           {/* Language Toggle */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm rounded-lg p-1 border border-white/20">
+            <div className="flex items-center space-x-1 bg-muted rounded-lg p-1">
               <button
                 onClick={() => setLanguage('es')}
                 className={`px-3 py-1 text-sm font-medium rounded transition-all ${
                   language === 'es' 
-                    ? 'bg-accent text-black shadow-sm' 
-                    : 'text-white/70 hover:text-white'
+                    ? 'bg-white text-primary shadow-sm' 
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 ES
@@ -133,8 +133,8 @@ const Header = () => {
                 onClick={() => setLanguage('en')}
                 className={`px-3 py-1 text-sm font-medium rounded transition-all ${
                   language === 'en' 
-                    ? 'bg-accent text-black shadow-sm' 
-                    : 'text-white/70 hover:text-white'
+                    ? 'bg-white text-primary shadow-sm' 
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 EN
@@ -142,75 +142,76 @@ const Header = () => {
             </div>
           </div>
 
+
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white"
+            className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-6 bg-black/40 backdrop-blur-lg border-t border-white/10 rounded-b-2xl">
-            <nav className="flex flex-col space-y-6">
+          <div className="md:hidden py-4 border-t border-border">
+            <nav className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('home')}
-                className={`text-left px-4 py-2 rounded-lg font-space text-lg transition-all ${activeSection === 'home' ? 'text-accent bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/5'}`}
+                className={`text-left nav-link-mobile ${activeSection === 'home' ? 'active' : ''}`}
               >
                 {t('nav.home')}
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
-                className={`text-left px-4 py-2 rounded-lg font-space text-lg transition-all ${activeSection === 'about' ? 'text-accent bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/5'}`}
+                className={`text-left nav-link-mobile ${activeSection === 'about' ? 'active' : ''}`}
               >
                 {t('nav.about')}
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
-                className={`text-left px-4 py-2 rounded-lg font-space text-lg transition-all ${activeSection === 'services' ? 'text-accent bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/5'}`}
+                className={`text-left nav-link-mobile ${activeSection === 'services' ? 'active' : ''}`}
               >
                 {t('nav.services')}
               </button>
               <button 
                 onClick={() => scrollToSection('system')}
-                className={`text-left px-4 py-2 rounded-lg font-space text-lg transition-all ${activeSection === 'system' ? 'text-accent bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/5'}`}
+                className={`text-left nav-link-mobile ${activeSection === 'system' ? 'active' : ''}`}
               >
                 {t('nav.platform')}
               </button>
               <button 
                 onClick={() => scrollToSection('results')}
-                className={`text-left px-4 py-2 rounded-lg font-space text-lg transition-all ${activeSection === 'results' ? 'text-accent bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/5'}`}
+                className={`text-left nav-link-mobile ${activeSection === 'results' ? 'active' : ''}`}
               >
                 {t('nav.results')}
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className={`text-left px-4 py-2 rounded-lg font-space text-lg transition-all ${activeSection === 'contact' ? 'text-accent bg-white/10' : 'text-white/80 hover:text-white hover:bg-white/5'}`}
+                className={`text-left nav-link-mobile ${activeSection === 'contact' ? 'active' : ''}`}
               >
                 {t('nav.contact')}
               </button>
               
               {/* Mobile Language Toggle */}
-              <div className="pt-4 border-t border-white/20">
-                <div className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm rounded-lg p-1 border border-white/20">
+              <div className="pt-4 border-t border-border">
+                <div className="flex items-center space-x-1 bg-muted rounded-lg p-1 mb-4">
                   <button
                     onClick={() => setLanguage('es')}
-                    className={`flex-1 px-3 py-3 text-sm font-medium rounded transition-all ${
+                    className={`flex-1 px-3 py-2 text-sm font-medium rounded transition-all ${
                       language === 'es' 
-                        ? 'bg-accent text-black shadow-sm' 
-                        : 'text-white/70 hover:text-white'
+                        ? 'bg-white text-primary shadow-sm' 
+                        : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
                     Español
                   </button>
                   <button
                     onClick={() => setLanguage('en')}
-                    className={`flex-1 px-3 py-3 text-sm font-medium rounded transition-all ${
+                    className={`flex-1 px-3 py-2 text-sm font-medium rounded transition-all ${
                       language === 'en' 
-                        ? 'bg-accent text-black shadow-sm' 
-                        : 'text-white/70 hover:text-white'
+                        ? 'bg-white text-primary shadow-sm' 
+                        : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
                     English

@@ -14,117 +14,68 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Dynamic Background with Morphing Shape */}
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
           alt="Construction site with BIM technology" 
-          className="w-full h-full object-cover opacity-30 mix-blend-overlay"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-purple-900/30 to-orange-900/40"></div>
-        
-        {/* Floating Morphing Background Element */}
-        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-accent/20 to-purple-500/20 animate-morphing-bg blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-gradient-to-r from-blue-500/20 to-accent/20 animate-morphing-bg blur-2xl animation-delay-4000"></div>
+        <div className="absolute inset-0 bg-primary/75"></div>
       </div>
 
-      {/* Revolutionary Content Layout */}
-      <div className="container-professional relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-1 lg:gap-12 items-center min-h-screen py-2 lg:py-20">
-          
-          {/* Main Content - Typography Experiment */}
-          <div className="lg:col-span-8 space-y-2 lg:space-y-12">
-            
-            {/* Glowing Tech Badge */}
-            <div className="inline-flex items-center animate-slide-up-1">
-              <div className="px-3 lg:px-6 py-1.5 lg:py-3 bg-gradient-to-r from-accent/20 to-purple-500/20 backdrop-blur-sm border border-accent/30 rounded-full">
-                <span className="font-mono text-xs lg:text-sm text-accent tracking-widest uppercase animate-text-glow">
-                  {t('hero.badge')}
-                </span>
-              </div>
-            </div>
-
-            {/* Experimental Typography Layout - Responsive */}
-            <div className="space-y-0 lg:space-y-8 animate-slide-up-2">
-              <h1 className="font-space font-light tracking-tighter leading-[0.8]">
-                <span className="block text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] text-white">
-                  {t('hero.title1')}
-                </span>
-                <span className="block text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl text-transparent bg-gradient-to-r from-accent via-purple-400 to-blue-400 bg-clip-text font-medium ml-2 sm:ml-4 lg:ml-8 xl:ml-16 -mt-1 lg:mt-4">
-                  {t('hero.title2')}
-                </span>
-              </h1>
-            </div>
-
-            {/* Innovative Description with Mono Font - Mobile Optimized */}
-            <div className="animate-slide-up-3 max-w-4xl py-0 lg:py-4">
-              <p className="font-mono text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl text-white/80 leading-relaxed tracking-wide">
-                <span className="text-accent">/// </span>
-                {t('hero.subtitle')}
-              </p>
-            </div>
-
-            {/* Futuristic CTA - Touch Optimized */}
-            <div className="animate-slide-up-3 pt-1 lg:pt-8 pb-1 lg:pb-2">
-              <button 
-                onClick={scrollToContact}
-                className="group relative overflow-hidden bg-gradient-to-r from-accent to-orange-600 text-black px-6 sm:px-10 lg:px-12 py-3 sm:py-5 lg:py-6 rounded-full font-space font-medium text-sm sm:text-lg tracking-wide transition-all duration-700 hover:scale-110 hover:shadow-2xl hover:shadow-accent/50 active:scale-95 touch-manipulation"
-              >
-                <span className="relative z-10">{t('hero.cta1')}</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </button>
-            </div>
-
+      {/* Content */}
+      <div className="container-custom relative z-10 text-center text-white">
+        <div className="max-w-4xl mx-auto">
+          {/* Badge */}
+          <div className="inline-flex items-center px-6 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+            <span className="text-sm font-medium">{t('hero.badge')}</span>
           </div>
 
-          {/* Stats Section - Mobile & Desktop Optimized */}
-          <div className="lg:col-span-4 mt-2 lg:mt-0">
+          {/* Main Headline */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+            <span className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-8xl block mb-2 drop-shadow-sm">{t('hero.title1')}</span>
+            <span className="text-accent block text-2xl sm:text-3xl md:text-4xl lg:text-6xl">{t('hero.title2')}</span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed px-4">
+            {t('hero.subtitle')}
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+            <Button 
+              variant="hero" 
+              size="lg"
+              onClick={scrollToContact}
+              className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto w-full sm:w-auto max-w-sm"
+            >
+              {t('hero.cta1')}
+              <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
+            </Button>
             
-            {/* Mobile: Horizontal Layout */}
-            <div className="lg:hidden grid grid-cols-3 gap-1 animate-slide-up-3">
-              {[
-                { value: "30%", label: t('hero.stat1') },
-                { value: "40%", label: t('hero.stat2') },
-                { value: "25%", label: t('hero.stat3') }
-              ].map((stat, index) => (
-                <div key={index} className="group text-center">
-                  <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-lg p-2 hover:bg-white/10 transition-all duration-500 hover:scale-105">
-                    <div className="font-mono text-xl sm:text-2xl font-light text-accent mb-1 group-hover:animate-text-glow">
-                      {stat.value}
-                    </div>
-                    <div className="font-space text-white/70 text-xs tracking-wider uppercase leading-tight">
-                      {stat.label}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Desktop: Vertical Floating Layout */}
-            <div className="hidden lg:block space-y-8 animate-float">
-              {[
-                { value: "30%", label: t('hero.stat1') },
-                { value: "40%", label: t('hero.stat2') },
-                { value: "25%", label: t('hero.stat3') }
-              ].map((stat, index) => (
-                <div key={index} className="group">
-                  <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 lg:p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105">
-                    <div className="font-mono text-5xl lg:text-6xl font-light text-accent mb-4 group-hover:animate-text-glow">
-                      {stat.value}
-                    </div>
-                    <div className="font-space text-white/70 text-sm tracking-widest uppercase">
-                      {stat.label}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
           </div>
 
+          {/* Key Stats */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 px-4">
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">30%</div>
+              <div className="text-white/80 text-sm sm:text-base">{t('hero.stat1')}</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">40%</div>
+              <div className="text-white/80 text-sm sm:text-base">{t('hero.stat2')}</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">25%</div>
+              <div className="text-white/80 text-sm sm:text-base">{t('hero.stat3')}</div>
+            </div>
+          </div>
         </div>
       </div>
+
     </section>
   );
 };
