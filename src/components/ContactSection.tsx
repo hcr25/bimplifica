@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Globe } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/hooks/useLanguage";
 import { supabase } from "@/integrations/supabase/client";
@@ -151,7 +151,7 @@ const ContactSection = () => {
 
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
-                  <Phone className="h-6 w-6 text-accent" />
+                  <Globe className="h-6 w-6 text-accent" />
                 </div>
                 <div>
                   <p className="font-semibold">{t('contact.info.website')}</p>
