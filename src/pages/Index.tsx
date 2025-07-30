@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import BimSection from "@/components/BimSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
-
+import SystemSection from "@/components/SystemSection";
 import ResultsSection from "@/components/ResultsSection";
 import ProcessSection from "@/components/ProcessSection";
 import ContactSection from "@/components/ContactSection";
@@ -51,6 +51,9 @@ const Index = () => {
           </section>
           <section id="bim" data-section="bim">
             <BimSection />
+          </section>
+          <section id="system" data-section="system">
+            <SystemSection />
           </section>
           <section id="results" data-section="results">
             <ResultsSection />

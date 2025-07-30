@@ -18,14 +18,14 @@ const Header = () => {
 
   // ScrollSpy functionality
   useEffect(() => {
-    const sections = ['home', 'about', 'services', 'bim', 'results', 'process', 'contact'];
+    const sections = ['home', 'about', 'services', 'bim', 'system', 'results', 'process', 'contact'];
     // Map sections to their corresponding nav items  
     const sectionToNavMap: Record<string, string> = {
       'home': 'home',
       'about': 'about', 
       'services': 'services',
       'bim': 'services', // BIM section maps to services nav
-      'system': 'results',
+      'system': 'system',
       'results': 'results',
       'process': 'results', // Process section maps to results nav
       'contact': 'contact'
@@ -64,7 +64,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-white border-b border-primary/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -97,6 +97,12 @@ const Header = () => {
               {t('nav.services')}
             </button>
             <button 
+              onClick={() => scrollToSection('system')}
+              className={`nav-link ${activeSection === 'system' ? 'active' : ''}`}
+            >
+              {t('nav.platform')}
+            </button>
+            <button 
               onClick={() => scrollToSection('results')}
               className={`nav-link ${activeSection === 'results' ? 'active' : ''}`}
             >
@@ -112,13 +118,13 @@ const Header = () => {
 
           {/* Language Toggle */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">
+            <div className="flex items-center space-x-1 bg-muted rounded-lg p-1">
               <button
                 onClick={() => setLanguage('es')}
                 className={`px-3 py-1 text-sm font-medium rounded transition-all ${
                   language === 'es' 
-                    ? 'bg-accent text-white shadow-sm' 
-                    : 'text-white/70 hover:text-white'
+                    ? 'bg-white text-primary shadow-sm' 
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 ES
@@ -127,8 +133,8 @@ const Header = () => {
                 onClick={() => setLanguage('en')}
                 className={`px-3 py-1 text-sm font-medium rounded transition-all ${
                   language === 'en' 
-                    ? 'bg-accent text-white shadow-sm' 
-                    : 'text-white/70 hover:text-white'
+                    ? 'bg-white text-primary shadow-sm' 
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 EN
@@ -148,7 +154,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/20">
+          <div className="md:hidden py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('home')}
@@ -169,6 +175,12 @@ const Header = () => {
                 {t('nav.services')}
               </button>
               <button 
+                onClick={() => scrollToSection('system')}
+                className={`text-left nav-link-mobile ${activeSection === 'system' ? 'active' : ''}`}
+              >
+                {t('nav.platform')}
+              </button>
+              <button 
                 onClick={() => scrollToSection('results')}
                 className={`text-left nav-link-mobile ${activeSection === 'results' ? 'active' : ''}`}
               >
@@ -182,14 +194,14 @@ const Header = () => {
               </button>
               
               {/* Mobile Language Toggle */}
-              <div className="pt-4 border-t border-white/20">
-                <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1 mb-4">
+              <div className="pt-4 border-t border-border">
+                <div className="flex items-center space-x-1 bg-muted rounded-lg p-1 mb-4">
                   <button
                     onClick={() => setLanguage('es')}
                     className={`flex-1 px-3 py-2 text-sm font-medium rounded transition-all ${
                       language === 'es' 
-                        ? 'bg-accent text-white shadow-sm' 
-                        : 'text-white/70 hover:text-white'
+                        ? 'bg-white text-primary shadow-sm' 
+                        : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
                     Español
@@ -198,8 +210,8 @@ const Header = () => {
                     onClick={() => setLanguage('en')}
                     className={`flex-1 px-3 py-2 text-sm font-medium rounded transition-all ${
                       language === 'en' 
-                        ? 'bg-accent text-white shadow-sm' 
-                        : 'text-white/70 hover:text-white'
+                        ? 'bg-white text-primary shadow-sm' 
+                        : 'text-muted-foreground hover:text-foreground'
                     }`}
                   >
                     English

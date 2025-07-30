@@ -7,14 +7,10 @@
 @layer base {
   :root {
     /* Brand Colors */
-    --primary: 214 85% 18%;        /* Deeper Navy Blue for better contrast */
+    --primary: 214 80% 20%;        /* Deep Navy Blue */
     --primary-foreground: 0 0% 100%;
     --accent: 25 95% 53%;          /* BIMPLIFICA Orange */
     --accent-foreground: 0 0% 100%;
-    
-    /* Header specific */
-    --header-bg: 214 85% 18%;      /* Dark navy for header */
-    --header-text: 0 0% 100%;      /* White text on dark header */
     
     /* Background & Surface */
     --background: 0 0% 100%;
@@ -224,7 +220,7 @@
   /* ScrollSpy Navigation Styles */
   .nav-link {
     @apply relative transition-all duration-300 font-medium;
-    color: hsl(var(--header-text));
+    color: hsl(var(--foreground));
   }
 
   .nav-link:hover {
