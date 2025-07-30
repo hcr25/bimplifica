@@ -2,55 +2,50 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send,
-  CheckCircle
-} from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/hooks/useLanguage";
 import { supabase } from "@/integrations/supabase/client";
-
 const ContactSection = () => {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
-    email: "", 
+    email: "",
     company: "",
     phone: "",
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-
   const validatePhone = (phone: string) => {
     const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
     return phone === '' || phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
   };
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    
+    const {
+      name,
+      value
+    } = e.target;
+
     // Basic input sanitization - remove potentially dangerous script tags
     const sanitizedValue = value.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
-    
     setFormData(prev => ({
       ...prev,
       [name]: sanitizedValue
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Client-side validation
     if (!validateEmail(formData.email)) {
       toast({
@@ -61,17 +56,15 @@ const ContactSection = () => {
       setIsSubmitting(false);
       return;
     }
-
     if (formData.phone && !validatePhone(formData.phone)) {
       toast({
-        title: "Error de validación", 
+        title: "Error de validación",
         description: "Por favor ingresa un número de teléfono válido.",
         variant: "destructive"
       });
       setIsSubmitting(false);
       return;
     }
-
     if (formData.message && formData.message.length > 1000) {
       toast({
         title: "Error de validación",
@@ -81,10 +74,12 @@ const ContactSection = () => {
       setIsSubmitting(false);
       return;
     }
-    
     try {
       // Use secure edge function for server-side validation and rate limiting
-      const { data, error } = await supabase.functions.invoke('submit-contact', {
+      const {
+        data,
+        error
+      } = await supabase.functions.invoke('submit-contact', {
         body: {
           name: formData.name.trim(),
           email: formData.email.trim().toLowerCase(),
@@ -93,7 +88,6 @@ const ContactSection = () => {
           message: formData.message?.trim() || null
         }
       });
-
       if (error) {
         throw new Error(error.message || 'Failed to submit contact request');
       }
@@ -101,14 +95,14 @@ const ContactSection = () => {
       // Success
       toast({
         title: t('contact.form.success.title'),
-        description: t('contact.form.success.description'),
+        description: t('contact.form.success.description')
       });
-      
+
       // Reset form
       setFormData({
         name: "",
         email: "",
-        company: "", 
+        company: "",
         phone: "",
         message: ""
       });
@@ -123,16 +117,12 @@ const ContactSection = () => {
       setIsSubmitting(false);
     }
   };
-
-  return (
-    <section id="contact" className="section-padding bg-primary">
+  return <section id="contact" className="section-padding bg-primary my-0">
       <div className="container-custom px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Contact Information */}
-          <div className="text-white">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-              {t('contact.title')}
-            </h2>
+          <div className="text-white my-0">
+            
             <p className="text-base sm:text-lg lg:text-xl text-white/90 mb-8 sm:mb-12 leading-relaxed">
               {t('contact.subtitle')}
             </p>
@@ -187,7 +177,7 @@ const ContactSection = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-2xl">
+          <div className="bg-white rounded-2xl p-8 shadow-2xl my-0">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-primary mb-4">
                 {t('contact.form.title')}
@@ -203,27 +193,13 @@ const ContactSection = () => {
                   <label className="block text-sm font-medium text-primary mb-2">
                     {t('contact.form.name')}
                   </label>
-                  <Input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    placeholder={t('contact.form.name.placeholder')}
-                  />
+                  <Input type="text" name="name" value={formData.name} onChange={handleInputChange} required placeholder={t('contact.form.name.placeholder')} />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
                     {t('contact.form.email')}
                   </label>
-                  <Input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    placeholder={t('contact.form.email.placeholder')}
-                  />
+                  <Input type="email" name="email" value={formData.email} onChange={handleInputChange} required placeholder={t('contact.form.email.placeholder')} />
                 </div>
               </div>
 
@@ -232,25 +208,13 @@ const ContactSection = () => {
                   <label className="block text-sm font-medium text-primary mb-2">
                     {t('contact.form.company')}
                   </label>
-                  <Input
-                    type="text"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    placeholder={t('contact.form.company.placeholder')}
-                  />
+                  <Input type="text" name="company" value={formData.company} onChange={handleInputChange} placeholder={t('contact.form.company.placeholder')} />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
                     {t('contact.form.phone')}
                   </label>
-                  <Input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    placeholder={t('contact.form.phone.placeholder')}
-                  />
+                  <Input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder={t('contact.form.phone.placeholder')} />
                 </div>
               </div>
 
@@ -258,30 +222,14 @@ const ContactSection = () => {
                 <label className="block text-sm font-medium text-primary mb-2">
                   {t('contact.form.message')}
                 </label>
-                <Textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder={t('contact.form.message.placeholder')}
-                  rows={4}
-                />
+                <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder={t('contact.form.message.placeholder')} rows={4} />
               </div>
 
-              <Button 
-                type="submit"
-                variant="accent"
-                size="lg"
-                className="w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  t('contact.form.sending')
-                ) : (
-                  <>
+              <Button type="submit" variant="accent" size="lg" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? t('contact.form.sending') : <>
                     {t('contact.form.submit')}
                     <Send className="ml-2 h-5 w-5" />
-                  </>
-                )}
+                  </>}
               </Button>
             </form>
 
@@ -291,8 +239,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
