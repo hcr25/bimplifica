@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img src="/lovable-uploads/f9e94f2a-0fda-468b-b11b-c62e2bc61336.png" alt="BIMPLIFICA Logo" className="h-12 w-auto" />
+              <img src="/lovable-uploads/f9e94f2a-0fda-468b-b11b-c62e2bc61336.png" alt="BIMPLIFICA Logo" className="h-14 w-auto" />
             </div>
             <p className="text-white/80 mb-6 leading-relaxed max-w-md">
               {t('footer.description')}
