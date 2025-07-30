@@ -18,14 +18,13 @@ const Header = () => {
 
   // ScrollSpy functionality
   useEffect(() => {
-    const sections = ['home', 'about', 'services', 'bim', 'system', 'results', 'process', 'contact'];
+    const sections = ['home', 'about', 'services', 'bim', 'results', 'process', 'contact'];
     // Map sections to their corresponding nav items  
     const sectionToNavMap: Record<string, string> = {
       'home': 'home',
       'about': 'about', 
       'services': 'services',
       'bim': 'services', // BIM section maps to services nav
-      'system': 'system',
       'results': 'results',
       'process': 'results', // Process section maps to results nav
       'contact': 'contact'
@@ -95,12 +94,6 @@ const Header = () => {
               className={`nav-link ${activeSection === 'services' ? 'active' : ''}`}
             >
               {t('nav.services')}
-            </button>
-            <button 
-              onClick={() => scrollToSection('system')}
-              className={`nav-link ${activeSection === 'system' ? 'active' : ''}`}
-            >
-              {t('nav.platform')}
             </button>
             <button 
               onClick={() => scrollToSection('results')}
@@ -173,12 +166,6 @@ const Header = () => {
                 className={`text-left nav-link-mobile ${activeSection === 'services' ? 'active' : ''}`}
               >
                 {t('nav.services')}
-              </button>
-              <button 
-                onClick={() => scrollToSection('system')}
-                className={`text-left nav-link-mobile ${activeSection === 'system' ? 'active' : ''}`}
-              >
-                {t('nav.platform')}
               </button>
               <button 
                 onClick={() => scrollToSection('results')}
