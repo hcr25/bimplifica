@@ -1,4 +1,4 @@
-import { MapPin, Mail, Globe } from "lucide-react";
+
 import teamImage from "@/assets/team-collaboration.jpg";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -21,39 +21,6 @@ const AboutSection = () => {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {t('about.description2')}
               </p>
-            </div>
-
-            {/* Contact Info */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <p className="font-semibold text-primary">{t('about.location')}</p>
-                  <p className="text-muted-foreground">Santiago, Chile</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                  <Mail className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <p className="font-semibold text-primary">{t('about.email')}</p>
-                  <p className="text-muted-foreground">contacto@bimplifica.cl</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
-                  <Globe className="h-6 w-6 text-accent" />
-                </div>
-                <div>
-                  <p className="font-semibold text-primary">{t('about.website')}</p>
-                  <p className="text-muted-foreground">www.bimplifica.cl</p>
-                </div>
-              </div>
             </div>
           </div>
 
