@@ -143,6 +143,17 @@ const ContactSection = () => {
 
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-accent" />
+                </div>
+                <div>
+                  <p className="font-semibold">{t('contact.info.phone')}</p>
+                  <a href="https://wa.me/56982839611" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
+                    +56 9 82839611
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
                   <MapPin className="h-6 w-6 text-accent" />
                 </div>
                 <div>
