@@ -135,7 +135,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold">{t('contact.info.email')}</p>
-                  <p className="text-white/80">contacto@bimplifica.cl</p>
+                  <a href="mailto:contacto@bimplifica.cl" className="text-white/80 hover:text-white transition-colors">
+                    contacto@bimplifica.cl
+                  </a>
                 </div>
               </div>
 
