@@ -29,7 +29,9 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">contacto@bimplifica.cl</span>
+                <a href="mailto:contacto@bimplifica.cl" className="text-muted-foreground hover:text-foreground transition-colors">
+                  contacto@bimplifica.cl
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Globe className="h-5 w-5 text-accent" />
