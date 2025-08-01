@@ -538,6 +538,10 @@ const translations = {
     es: 'Sitio Web',
     en: 'Website'
   },
+  'contact.info.contactNumber': {
+    es: 'Número de contacto',
+    en: 'Contact Number'
+  },
   'contact.benefits.title': {
     es: 'Lo Que Obtiene:',
     en: 'What You Get:'
