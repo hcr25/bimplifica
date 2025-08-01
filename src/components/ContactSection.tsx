@@ -146,7 +146,7 @@ const ContactSection = () => {
                   <Phone className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <p className="font-semibold">{t('contact.info.phone')}</p>
+                  <p className="font-semibold">{t('contact.info.telephone')}</p>
                   <a href="https://wa.me/56982839611" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
                     +56 9 82839611
                   </a>
