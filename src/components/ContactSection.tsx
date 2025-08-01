@@ -157,7 +157,9 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold">{t('contact.info.website')}</p>
-                  <p className="text-white/80">www.bimplifica.cl</p>
+                  <a href="https://www.bimplifica.cl" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors">
+                    www.bimplifica.cl
+                  </a>
                 </div>
               </div>
             </div>

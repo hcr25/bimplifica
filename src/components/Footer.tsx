@@ -35,7 +35,9 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Globe className="h-5 w-5 text-accent" />
-                <span className="text-muted-foreground">www.bimplifica.cl</span>
+                <a href="https://www.bimplifica.cl" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                  www.bimplifica.cl
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-accent" />
